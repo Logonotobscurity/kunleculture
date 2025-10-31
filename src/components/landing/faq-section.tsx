@@ -30,10 +30,10 @@ const faqs = [
 
 export function FaqSection() {
   return (
-    <section className="w-full py-16 md:py-24 bg-secondary/50">
+    <section className="w-full py-16 md:py-24 bg-muted">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-h3-mobile md:text-h3-desktop font-headline font-semibold text-foreground">
+          <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
             Frequently Asked Questions
           </h2>
         </div>

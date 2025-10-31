@@ -42,7 +42,7 @@ export function Footer() {
               <KunleLogo className="h-8 w-auto text-primary-foreground" />
             </Link>
             <p className="text-sm text-primary-foreground/70 mb-6 max-w-sm">
-                Kunle Couture is a contemporary luxury menswear brand that fuses the artistry of traditional African tailoring with modern design sensibilities.
+                Kunle Couture is a contemporary luxury menswear brand that fuses the artistry of traditional African tailoring with modern design sensibilities. Rooted in craftsmanship, cultural pride, and individuality, each Kunle Couture piece tells a story of elegance and purpose — designed for the modern man who values authenticity and distinction.
             </p>
             <div className="flex space-x-4 mb-6">
                 <Link href="#" aria-label="Instagram"><Instagram className="h-6 w-6 hover:opacity-80 transition-opacity" /></Link>

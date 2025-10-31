@@ -49,7 +49,7 @@ export function BespokeSection() {
     <section className="w-full py-16 md:py-24 bg-tailoring-process">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-h3-mobile md:text-h3-desktop font-headline font-semibold text-foreground">
+          <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
             The Bespoke & Tailoring Journey
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">

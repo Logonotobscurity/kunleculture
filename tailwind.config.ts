@@ -8,15 +8,20 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
     extend: {
       fontFamily: {
-        body: ['Poppins', 'sans-serif'],
-        headline: ['Poppins', 'sans-serif'],
-        code: ['monospace'],
+        sans: ['"Sofia Pro"', 'sans-serif'],
       },
       fontSize: {
         'hero-mobile': ['25px', '24.75px'],
-        'hero-desktop': ['40.8px', '40.4px'],
+        'hero-desktop': ['40.8023px', '40.3943px'],
         'h1-mobile': ['32px', '36.07px'],
         'h1-desktop': ['58.33px', '65.63px'],
         'h3-mobile': ['22px', '22px'],
@@ -57,30 +62,13 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        chart: {
-          '1': 'hsl(var(--chart-1))',
-          '2': 'hsl(var(--chart-2))',
-          '3': 'hsl(var(--chart-3))',
-          '4': 'hsl(var(--chart-4))',
-          '5': 'hsl(var(--chart-5))',
-        },
-        sidebar: {
-          DEFAULT: 'hsl(var(--sidebar-background))',
-          foreground: 'hsl(var(--sidebar-foreground))',
-          primary: 'hsl(var(--sidebar-primary))',
-          'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-          accent: 'hsl(var(--sidebar-accent))',
-          'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-          border: 'hsl(var(--sidebar-border))',
-          ring: 'hsl(var(--sidebar-ring))',
-        },
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
-        xl: '24px',
-        '2xl': '48px',
+        xl: 'calc(var(--radius) + 8px)',
+        '2xl': 'calc(var(--radius) + 32px)',
         full: '9999px',
       },
       boxShadow: {
@@ -88,7 +76,7 @@ export default {
         large: 'rgba(0,0,0,0.1) 0px 4px 8px 0px',
       },
       backgroundImage: {
-        'hero-overlay': 'linear-gradient(to top, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0.4) 40%, transparent 70%)',
+        'hero-overlay': 'linear-gradient(rgba(0,0,0,0) 19%, rgba(0,0,0,0.5) 100%, rgb(0,0,0) 112%)',
         'editorial-section': 'linear-gradient(167deg, rgb(244,241,230) 0%, rgb(250,248,242) 38%, rgb(250,248,242) 84%, rgb(244,241,230) 100%)',
         'tailoring-process': 'linear-gradient(rgb(215,227,235) 0%, rgb(250,234,171) 100%)',
       },

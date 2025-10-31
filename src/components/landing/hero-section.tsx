@@ -20,7 +20,7 @@ export function HeroSection() {
       )}
       <div className="absolute inset-0 bg-hero-overlay"></div>
       <div className="relative z-10 flex flex-col items-center p-4">
-        <h1 className="font-headline font-semibold text-h1-mobile md:text-h1-desktop text-white leading-tight drop-shadow-lg">
+        <h1 className="font-sans font-semibold text-h1-mobile md:text-h1-desktop text-white leading-tight drop-shadow-lg">
           Elegance, Redefined.
         </h1>
         <div className="my-4">

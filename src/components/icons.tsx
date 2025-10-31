@@ -9,9 +9,9 @@ export const KunleLogo = ({ className }: { className?: string }) => (
     <text
       x="0"
       y="18"
-      fontFamily="'Poppins', sans-serif"
+      fontFamily="'Sofia Pro', sans-serif"
       fontSize="24"
-      fontWeight="600"
+      fontWeight="700"
       letterSpacing="1"
     >
       KUNLE
@@ -19,7 +19,7 @@ export const KunleLogo = ({ className }: { className?: string }) => (
     <text
       x="95"
       y="18"
-      fontFamily="'Poppins', sans-serif"
+      fontFamily="'Sofia Pro', sans-serif"
       fontSize="24"
       fontWeight="300"
       letterSpacing="1"

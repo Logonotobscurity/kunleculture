@@ -32,13 +32,13 @@ export function Navbar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        hasScrolled ? "bg-background/80 shadow-md backdrop-blur-sm" : "bg-transparent"
+        hasScrolled ? "bg-white/80 shadow-md backdrop-blur-sm" : "bg-white"
       )}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-[57px]">
           <Link href="/" className="flex items-center gap-2">
-            <KunleLogo className={cn("h-6 w-auto transition-colors", "text-black")} />
+            <KunleLogo className={cn("h-6 w-auto transition-colors", "text-foreground")} />
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -48,7 +48,7 @@ export function Navbar() {
                 href={link.href}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-accent",
-                  "text-black"
+                  "text-foreground"
                 )}
               >
                 {link.label}
@@ -57,7 +57,7 @@ export function Navbar() {
           </nav>
 
           <div className="flex items-center gap-2">
-             <Button variant="secondary" size="icon" className="rounded-full bg-white text-primary shadow-subtle w-10 h-10 hidden md:inline-flex">
+             <Button variant="secondary" size="icon" className="rounded-full bg-white text-primary shadow-subtle w-10 h-10 hidden md:inline-flex hover:scale-105 transition-transform">
                 <User className="h-5 w-5"/>
                 <span className="sr-only">Login</span>
             </Button>
@@ -65,7 +65,7 @@ export function Navbar() {
             <div className="md:hidden">
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className={cn("h-12 w-12", "text-black")}>
+                  <Button variant="ghost" size="icon" className={cn("h-12 w-12", "text-foreground")}>
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Open menu</span>
                   </Button>

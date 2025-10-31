@@ -69,7 +69,7 @@ export function CategoryGrid() {
                         {cat.badge && (
                         <Badge variant="destructive" className="absolute top-4 left-4 bg-accent text-accent-foreground">{cat.badge}</Badge>
                         )}
-                        <h3 className="text-3xl font-bold text-white font-headline">{cat.title}</h3>
+                        <h3 className="text-3xl font-bold text-white font-sans">{cat.title}</h3>
                     </CardContent>
                 </Card>
             </div>
@@ -89,7 +89,7 @@ export function CategoryGrid() {
                         )}
                         <div className="absolute inset-0 bg-black/40"></div>
                         <CardContent className="relative z-10 flex flex-col h-full justify-end p-6">
-                            <h3 className="text-3xl font-bold text-white font-headline">{cat.title}</h3>
+                            <h3 className="text-3xl font-bold text-white font-sans">{cat.title}</h3>
                         </CardContent>
                     </Card>
                 </div>
@@ -111,7 +111,7 @@ export function CategoryGrid() {
                         )}
                         <div className="absolute inset-0 bg-black/30"></div>
                         <CardContent className="relative z-10 flex h-full items-center justify-center p-6">
-                            <h3 className="text-2xl font-bold text-white font-headline">{cat.title}</h3>
+                            <h3 className="text-2xl font-bold text-white font-sans">{cat.title}</h3>
                         </CardContent>
                     </Card>
                 </div>
