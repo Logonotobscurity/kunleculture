@@ -7,23 +7,28 @@ export function HeroSection() {
   const heroImage = PlaceHolderImages.find((p) => p.id === "hero-background");
 
   return (
-    <section className="relative h-[60dvh] min-h-[500px] w-full flex items-center justify-center text-center bg-secondary">
+    <section className="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center text-center text-white">
+      {heroImage && (
+        <Image
+          src={heroImage.imageUrl}
+          alt={heroImage.description}
+          fill
+          className="object-cover"
+          priority
+          data-ai-hint={heroImage.imageHint}
+        />
+      )}
+      <div className="absolute inset-0 bg-hero-overlay" />
       <div className="relative z-10 flex flex-col items-center p-4">
-        <h1 className="font-bold text-4xl md:text-6xl text-foreground leading-tight drop-shadow-sm">
-          Powering Business Success
-        </h1>
-        <div className="my-4">
+        <div className="h-24">
             <AnimatedText />
         </div>
-        <p className="max-w-2xl text-lg md:text-xl text-muted-foreground mb-8">
-          We provide innovative solutions for modern B2B challenges.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Button size="lg">
-            Get Started
+        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+          <Button size="lg" className="bg-white text-black hover:bg-stone-200 rounded-full shadow-large">
+            Explore Collection
           </Button>
-          <Button size="lg" variant="outline">
-            Learn More
+          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 rounded-full backdrop-blur-sm">
+            Book Bespoke
           </Button>
         </div>
       </div>

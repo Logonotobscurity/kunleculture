@@ -9,10 +9,10 @@ import { cn } from "@/lib/utils";
 import { KunleLogo } from "@/components/icons";
 
 const navLinks = [
-  { href: "#", label: "Solutions" },
-  { href: "#", label: "Company" },
-  { href: "#", label: "Pricing" },
-  { href: "#", label: "Docs" },
+  { href: "#", label: "Shop" },
+  { href: "#", label: "Bespoke" },
+  { href: "#", label: "Lookbook" },
+  { href: "#", label: "About" },
 ];
 
 export function Navbar() {
@@ -57,8 +57,7 @@ export function Navbar() {
           </nav>
 
           <div className="flex items-center gap-2">
-             <Button variant="outline" size="sm" className="hidden md:inline-flex">
-                <User className="h-4 w-4 mr-2"/>
+             <Button variant="outline" size="sm" className="hidden md:inline-flex rounded-full shadow-large bg-white">
                 Login
             </Button>
             
@@ -96,7 +95,6 @@ export function Navbar() {
                         </nav>
                         <div className="p-6 border-t">
                              <Button className="w-full" size="lg">
-                                <User className="mr-2 h-5 w-5"/>
                                 Login / Sign Up
                             </Button>
                         </div>

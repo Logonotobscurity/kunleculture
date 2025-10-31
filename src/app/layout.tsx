@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Corporate B2B",
-  description: "Modern and professional B2B solutions.",
+  title: "Kunle Couture",
+  description: "Contemporary luxury menswear fusing traditional African tailoring with modern design.",
 };
 
 export default function RootLayout({
@@ -18,8 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
-      <body className={cn("antialiased", inter.className)}>
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/jhs3vje.css" />
+      </head>
+      <body className={cn("antialiased")}>
         {children}
         <Toaster />
       </body>
