@@ -29,53 +29,45 @@ const processSteps = [
   },
 ];
 
-const featureCards = [
-    {
-      title: "Fabric Sourcing",
-      description: "We travel the world to source the most exquisite and unique fabrics for your one-of-a-kind garment.",
-    },
-    {
-      title: "Expert Tailors",
-      description: "Our artisans possess decades of experience in traditional and modern tailoring techniques.",
-    },
-    {
-      title: "Measurement Precision",
-      description: "We utilize both classic methods and modern technology to achieve unparalleled accuracy in fit.",
-    },
-]
-
 export function BespokeSection() {
   return (
     <section className="w-full py-16 md:py-24 bg-tailoring-process">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-yellow-900">
-            The Art of Bespoke
-          </h2>
-          <p className="mt-4 text-lg text-yellow-900/80">
-            Experience the art of true craftsmanship with a garment made exclusively for you.
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-            {processSteps.map((step, index) => (
-                <div key={step.title} className="flex flex-col items-center text-center">
-                    <div className="bg-white/50 rounded-full p-4 border border-yellow-900/20 mb-4 shadow-lg">
-                        {step.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-yellow-900">{step.title}</h3>
-                    <p className="mt-2 text-yellow-900/80">{step.description}</p>
+        <div className="flex flex-col md:flex-row md:items-start gap-x-5">
+            <div className="w-full md:max-w-[calc(100%_-_46.5px)]">
+                <div className="mb-8 md:mb-0">
+                    <span className="block h-0.5 w-20 bg-accent mb-5"></span>
+                    <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-yellow-900">
+                        The Art of Bespoke
+                    </h2>
+                    <p className="mt-4 text-lg text-yellow-900/80 max-w-2xl">
+                        Experience the art of true craftsmanship with a garment made exclusively for you. Our bespoke service is a journey of collaboration, precision, and personalization.
+                    </p>
                 </div>
-            ))}
-        </div>
-        
-        <div className="mt-16 text-center flex gap-4 justify-center">
-          <Button size="lg" className="rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large">
-            Book Appointment
-          </Button>
-          <Button size="lg" variant="outline" className="rounded-full border-yellow-900 text-yellow-900 hover:bg-yellow-900/10">
-            How It Works
-          </Button>
+            </div>
+            <div className="w-full">
+                <div className="grid gap-8 md:grid-cols-2">
+                    {processSteps.map((step) => (
+                        <div key={step.title} className="flex items-start gap-4">
+                            <div className="bg-white/50 rounded-full p-3 border border-yellow-900/20 shadow-lg">
+                                {step.icon}
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-yellow-900">{step.title}</h3>
+                                <p className="mt-1 text-yellow-900/80">{step.description}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                 <div className="mt-12 flex gap-4">
+                    <Button size="lg" className="rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large">
+                        Book Appointment
+                    </Button>
+                    <Button size="lg" variant="outline" className="rounded-full border-yellow-900 text-yellow-900 hover:bg-yellow-900/10">
+                        How It Works
+                    </Button>
+                </div>
+            </div>
         </div>
       </div>
     </section>
