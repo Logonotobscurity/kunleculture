@@ -38,7 +38,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-[57px]">
           <Link href="/" className="flex items-center gap-2">
-            <KunleLogo className={cn("h-6 w-auto transition-colors", hasScrolled || "text-white dark:text-foreground")} />
+            <KunleLogo className={cn("h-6 w-auto transition-colors", "text-black")} />
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -48,7 +48,7 @@ export function Navbar() {
                 href={link.href}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-accent",
-                  hasScrolled ? "text-foreground" : "text-white"
+                  "text-black"
                 )}
               >
                 {link.label}
@@ -65,7 +65,7 @@ export function Navbar() {
             <div className="md:hidden">
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className={cn("h-12 w-12", hasScrolled ? "text-foreground" : "text-white")}>
+                  <Button variant="ghost" size="icon" className={cn("h-12 w-12", "text-black")}>
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Open menu</span>
                   </Button>
