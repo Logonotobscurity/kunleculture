@@ -9,10 +9,10 @@ import { cn } from "@/lib/utils";
 import { KunleLogo } from "@/components/icons";
 
 const navLinks = [
-  { href: "#", label: "Shop" },
-  { href: "#", label: "Bespoke" },
-  { href: "#", label: "Lookbook" },
-  { href: "#", label: "About" },
+  { href: "#", label: "Solutions" },
+  { href: "#", label: "Company" },
+  { href: "#", label: "Pricing" },
+  { href: "#", label: "Docs" },
 ];
 
 export function Navbar() {
@@ -32,7 +32,7 @@ export function Navbar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        hasScrolled ? "bg-white/80 shadow-md backdrop-blur-sm" : "bg-white"
+        hasScrolled ? "bg-background/80 shadow-sm backdrop-blur-sm" : "bg-background"
       )}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -47,7 +47,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-accent",
+                  "text-sm font-medium transition-colors hover:text-primary",
                   "text-foreground"
                 )}
               >
@@ -57,9 +57,9 @@ export function Navbar() {
           </nav>
 
           <div className="flex items-center gap-2">
-             <Button variant="secondary" size="icon" className="rounded-full bg-white text-primary shadow-subtle w-10 h-10 hidden md:inline-flex hover:scale-105 transition-transform">
-                <User className="h-5 w-5"/>
-                <span className="sr-only">Login</span>
+             <Button variant="outline" size="sm" className="hidden md:inline-flex">
+                <User className="h-4 w-4 mr-2"/>
+                Login
             </Button>
             
             <div className="md:hidden">
@@ -87,7 +87,7 @@ export function Navbar() {
                             <SheetClose asChild key={link.href}>
                                 <Link
                                     href={link.href}
-                                    className="text-2xl font-medium text-foreground transition-colors hover:text-accent"
+                                    className="text-2xl font-medium text-foreground transition-colors hover:text-primary"
                                 >
                                     {link.label}
                                 </Link>
@@ -95,7 +95,7 @@ export function Navbar() {
                             ))}
                         </nav>
                         <div className="p-6 border-t">
-                             <Button className="w-full rounded-full" size="lg">
+                             <Button className="w-full" size="lg">
                                 <User className="mr-2 h-5 w-5"/>
                                 Login / Sign Up
                             </Button>

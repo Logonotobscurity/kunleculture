@@ -7,24 +7,24 @@ import {
 
 const faqs = [
   {
-    question: "How does the bespoke ordering work?",
-    answer: "Our bespoke process begins with a personal consultation to understand your style. We then take detailed measurements, conduct several fittings, and hand-finish your unique garment. The entire process typically takes 6-8 weeks."
+    question: "What services do you offer?",
+    answer: "We provide end-to-end solutions for B2B clients, including market analysis, strategy development, and implementation support. Our goal is to help your business grow."
   },
   {
-    question: "What are your measurement and fitting policies?",
-    answer: "We guarantee a perfect fit. Initial measurements are comprehensive, and we include up to three fittings in the price of a bespoke piece to ensure every detail is correct. For ready-to-wear, we offer in-house alterations."
+    question: "Who are your typical clients?",
+    answer: "We work with a wide range of businesses, from startups to Fortune 500 companies, across various industries. Our solutions are tailored to meet the unique needs of each client."
   },
   {
-    question: "Do you offer international shipping?",
-    answer: "Yes, we ship worldwide via trusted carriers like DHL and FedEx. Shipping costs and delivery times vary by destination. All applicable duties and taxes are the responsibility of the customer."
+    question: "How do you measure success?",
+    answer: "Success is measured against the key performance indicators (KPIs) we establish at the beginning of each project. These typically include metrics like ROI, market share growth, and customer acquisition cost."
   },
   {
-    question: "How long does a bespoke piece take to create?",
-    answer: "A fully bespoke garment, such as an agbada or suit, typically takes 6 to 8 weeks from the initial consultation to final delivery. This timeline allows for fabric sourcing, meticulous construction, and multiple fittings."
+    question: "What is your pricing model?",
+    answer: "Our pricing is project-based and depends on the scope and complexity of the work. We provide a detailed proposal and cost estimate after an initial consultation."
   },
   {
-    question: "What are the care instructions for your garments?",
-    answer: "Most of our garments, especially those made from wool, silk, or intricate weaves, are dry clean only. We provide specific care instructions with each piece to ensure its longevity. Please avoid machine washing."
+    question: "How can we get started?",
+    answer: "The first step is to schedule a free consultation with our team. We'll discuss your needs and determine how we can best assist you. You can contact us via the form on our website."
   }
 ];
 
@@ -33,14 +33,14 @@ export function FaqSection() {
     <section className="w-full py-16 md:py-24 bg-muted">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Frequently Asked Questions
           </h2>
         </div>
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-b-primary/10">
+              <AccordionItem key={index} value={`item-${index}`}>
                 <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-foreground">
                   {faq.question}
                 </AccordionTrigger>

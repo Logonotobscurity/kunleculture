@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PenLine, Ruler, Scissors, Shirt } from "lucide-react";
+import { PencilLine, Ruler, Scissors, Shirt } from "lucide-react";
 
 const processSteps = [
   {
-    icon: <PenLine className="w-8 h-8 text-primary" />,
+    icon: <PencilLine className="w-8 h-8 text-primary" />,
     title: "Consultation",
     description:
       "Begin with a personal consultation to discuss your vision, style, and fabric preferences.",
@@ -46,11 +46,11 @@ const featureCards = [
 
 export function BespokeSection() {
   return (
-    <section className="w-full py-16 md:py-24 bg-tailoring-process">
+    <section className="w-full py-16 md:py-24 bg-muted">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
-            The Bespoke & Tailoring Journey
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            Our Process
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Experience the art of true craftsmanship with a garment made exclusively for you.
@@ -58,11 +58,11 @@ export function BespokeSection() {
         </div>
 
         <div className="mt-12 relative">
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-primary/20 hidden md:block"></div>
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border hidden md:block"></div>
             <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
                 {processSteps.map((step, index) => (
                     <div key={step.title} className="flex flex-col items-center text-center">
-                        <div className="bg-background rounded-full p-4 shadow-subtle border border-primary/10 mb-4">
+                        <div className="bg-background rounded-full p-4 border mb-4">
                             {step.icon}
                         </div>
                         <h3 className="text-xl font-bold text-foreground">{`Step ${index + 1}: ${step.title}`}</h3>
@@ -74,7 +74,7 @@ export function BespokeSection() {
 
         <div className="grid md:grid-cols-3 gap-8 mt-16">
             {featureCards.map((feature) => (
-                <Card key={feature.title} className="bg-background/50 backdrop-blur-sm border-white-opacity-20 shadow-subtle text-center">
+                <Card key={feature.title} className="bg-background/50 text-center">
                     <CardHeader>
                         <CardTitle className="text-2xl font-semibold text-foreground">{feature.title}</CardTitle>
                     </CardHeader>
@@ -86,11 +86,11 @@ export function BespokeSection() {
         </div>
 
         <div className="mt-16 text-center flex gap-4 justify-center">
-          <Button size="lg" className="rounded-full shadow-large scale-100 hover:scale-105 transition-transform duration-200">
+          <Button size="lg">
             Book Appointment
           </Button>
-          <Button size="lg" variant="outline" className="rounded-full bg-transparent backdrop-blur-sm">
-            How Bespoke Works
+          <Button size="lg" variant="outline">
+            How It Works
           </Button>
         </div>
       </div>
