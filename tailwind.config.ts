@@ -79,6 +79,7 @@ export default {
         'hero-overlay': 'linear-gradient(rgba(0,0,0,0) 19%, rgba(0,0,0,0.5) 100%, rgb(0,0,0) 112%)',
         'editorial-section': 'linear-gradient(167deg, rgb(244,241,230) 0%, rgb(250,248,242) 38%, rgb(250,248,242) 84%, rgb(244,241,230) 100%)',
         'tailoring-process': 'linear-gradient(rgb(215,227,235) 0%, rgb(250,234,171) 100%)',
+        'background-texture': "url('https://www.ofi.com/background-texture.webp')",
       },
       keyframes: {
         'accordion-down': {

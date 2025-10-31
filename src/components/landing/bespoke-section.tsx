@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PencilLine, Ruler, Scissors, Shirt } from "lucide-react";
 
 const processSteps = [
@@ -31,7 +30,7 @@ const processSteps = [
 
 export function BespokeSection() {
   return (
-    <section className="w-full py-16 md:py-24 bg-tailoring-process">
+    <section className="w-full py-16 md:py-24 bg-tailoring-process bg-background-texture">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row md:items-start gap-x-5">
             <div className="w-full md:max-w-[calc(100%_-_46.5px)]">
