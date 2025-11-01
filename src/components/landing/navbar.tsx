@@ -51,10 +51,6 @@ export function Navbar() {
           </nav>
 
           <div className="flex items-center gap-2">
-             <Button variant="outline" size="sm" className="hidden md:inline-flex rounded-full shadow-large bg-white">
-                Login
-            </Button>
-            
             <div className="md:hidden">
               <Sheet>
                 <SheetTrigger asChild>
@@ -87,11 +83,6 @@ export function Navbar() {
                             </SheetClose>
                             ))}
                         </nav>
-                        <div className="p-6 border-t">
-                             <Button className="w-full" size="lg">
-                                Login / Sign Up
-                            </Button>
-                        </div>
                     </div>
                 </SheetContent>
               </Sheet>
