@@ -25,6 +25,26 @@ const collections = [
     price: "350",
     image: PlaceHolderImages.find((p) => p.id === "collection-4"),
   },
+  {
+    title: "Urban Regal Attire",
+    price: "850",
+    image: PlaceHolderImages.find((p) => p.id === "editorial-1"),
+  },
+  {
+    title: "The Advocate Ensemble",
+    price: "950",
+    image: PlaceHolderImages.find((p) => p.id === "editorial-4"),
+  },
+  {
+    title: "Noble Edit Jacket",
+    price: "1,100",
+    image: PlaceHolderImages.find((p) => p.id === "craft-fabric"),
+  },
+  {
+    title: "Roots and Royalty",
+    price: "720",
+    image: PlaceHolderImages.find((p) => p.id === "editorial-2"),
+  }
 ];
 
 export function CollectionSection() {
@@ -33,7 +53,7 @@ export function CollectionSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
-            Seasonal Collection
+            Full Collection
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Discover our latest ready-to-wear pieces, crafted with precision and passion.
@@ -71,7 +91,7 @@ export function CollectionSection() {
           ))}
         </div>
         <div className="mt-12 text-center">
-            <Button size="lg" className="rounded-full shadow-large">Explore Full Collection</Button>
+            <Button size="lg" className="rounded-full shadow-large">Explore More</Button>
         </div>
       </div>
     </section>
