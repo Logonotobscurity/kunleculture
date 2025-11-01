@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/landing/hero-section";
 import { CategoryGrid } from "@/components/landing/category-grid";
 import { CollectionSection } from "@/components/landing/collection-section";
 import { BespokeSection } from "@/components/landing/bespoke-section";
-import { EditorialSection } from "@/components/landing/editorial-section";
 import { TestimonialsSection } from "@/components/landing/testimonials-section";
 import { CraftSection } from "@/components/landing/craft-section";
 import { FaqSection } from "@/components/landing/faq-section";
@@ -19,7 +18,6 @@ export default function Home() {
         <CategoryGrid />
         <CollectionSection />
         <BespokeSection />
-        <EditorialSection />
         <TestimonialsSection />
         <CraftSection />
         <FaqSection />
