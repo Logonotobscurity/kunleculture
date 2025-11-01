@@ -57,10 +57,10 @@ export function CraftSection() {
               <CardHeader className="p-5">
                 <CardTitle className="text-xl font-semibold text-foreground">{card.title}</CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow p-5">
+              <CardContent className="flex-grow p-5 pt-0">
                 <p className="text-muted-foreground">{card.description}</p>
               </CardContent>
-              <CardFooter className="p-5">
+              <CardFooter className="p-5 pt-0">
                 <Button variant="link" className="p-0 text-primary group-hover:text-accent">
                   Learn More <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>

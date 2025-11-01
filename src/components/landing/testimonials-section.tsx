@@ -48,7 +48,7 @@ export function TestimonialsSection() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
                     <div className="max-w-xl">
-                        <h2 className="text-[36.327px] md:text-[56.0514px] font-bold leading-[34.8739px] md:leading-[56.0514px] tracking-[-0.72px] md:tracking-[-1.4px] font-sans text-foreground">
+                        <h2 className="text-h3-mobile md:text-h3-desktop font-bold font-sans text-foreground">
                             This experience actually changes lives. Don’t just take it from us.
                         </h2>
                     </div>
@@ -58,7 +58,7 @@ export function TestimonialsSection() {
                 </div>
                 <div className="flex overflow-x-auto space-x-6 pb-8 snap-x snap-mandatory">
                     {testimonials.map((testimonial, index) => (
-                        <div key={index} className={cn("flex-shrink-0 snap-center", "w-[90%] md:w-[30vw]")}>
+                        <div key={index} className={cn("flex-shrink-0 snap-center w-[90%] sm:w-[45%] md:w-[30%]")}>
                              {testimonial.isCta ? (
                                  <Link href={testimonial.href || '#'} className="block h-full group">
                                     <div className="relative flex flex-col items-center justify-center text-center w-full h-full aspect-[4/5] rounded-lg overflow-hidden shadow-large bg-black/30 p-8 text-white">
@@ -92,7 +92,7 @@ export function TestimonialsSection() {
                                         )}
                                     </div>
                                     <div>
-                                        <blockquote className="text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-[-0.32px] md:tracking-[-0.4px] font-medium text-foreground mb-4">
+                                        <blockquote className="text-lg md:text-xl font-medium text-foreground mb-4">
                                             “{testimonial.quote}”
                                         </blockquote>
                                         {testimonial.name && (
