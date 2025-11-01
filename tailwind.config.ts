@@ -12,7 +12,7 @@ export default {
       center: true,
       padding: '2rem',
       screens: {
-        '2xl': '1760px',
+        '2xl': '1400px',
       },
     },
     extend: {
@@ -20,12 +20,12 @@ export default {
         sans: ['gliroyFonts', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'hero': ['48.7885px', { lineHeight: '58.5462px', letterSpacing: '-3.8992px' }],
-        'hero-desktop': ['96.359px', { lineHeight: '115.631px', letterSpacing: '2.40898px' }],
+        'hero-mobile': ['25px', { lineHeight: '24.75px' }],
+        'hero': ['40.8023px', { lineHeight: '40.3943px' }],
         'h1-mobile': ['32px', '36.07px'],
         'h1-desktop': ['58.33px', '65.63px'],
-        'h3-mobile': ['36.327px', { lineHeight: '34.8739px', letterSpacing: '-0.72px' }],
-        'h3-desktop': ['56.0514px', { lineHeight: '56.0514px', letterSpacing: '-1.4px' }],
+        'h3-mobile': ['22px', { lineHeight: '22px' }],
+        'h3-desktop': ['50px', { lineHeight: '48.6px' }],
         'small': ['12px', '15.6px'],
         'sm': ['14px', '21px'],
         'base': ['16px', '24px'],
