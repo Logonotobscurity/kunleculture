@@ -1,0 +1,63 @@
+# Project Audit: Kunle Couture Website
+
+This document provides a detailed audit of the Kunle Couture website application, outlining its technical stack, design system, component architecture, and overall structure.
+
+## 1. Technical Stack & Configuration
+
+The application is built on a modern frontend stack:
+
+*   **Framework:** Next.js with the App Router (`/src/app`).
+*   **Language:** TypeScript.
+*   **Styling:** Tailwind CSS, configured with a custom theme.
+*   **UI Components:** ShadCN UI, providing a foundational set of accessible and customizable components (e.g., Button, Card, Carousel, Accordion).
+*   **Icons:** `lucide-react` for iconography.
+*   **State Management:** Primarily managed through React hooks (`useState`, `useEffect`).
+
+### Key Configuration Files:
+
+*   `tailwind.config.ts`: Extends the default Tailwind theme with custom colors, fonts, box shadows, and background gradients specific to the Kunle Couture brand.
+*   `src/app/globals.css`: Defines the core CSS custom properties (design tokens) for colors and radii, which are then consumed by Tailwind.
+*   `next.config.ts`: Configured to handle remote image patterns from `i.ibb.co`.
+*   `package.json`: Lists all dependencies and scripts for development and building.
+
+## 2. Design System
+
+The project uses a well-defined, token-based design system that reflects the Kunle Couture brand identity.
+
+*   **Color Palette:**
+    *   **Primary/Secondary:** Dominated by deep teals (`--teal-950`, `--teal-900`) for primary backgrounds and footers.
+    *   **Accent:** A strong pink (`--pink-900`) and various shades of orange and yellow (`--orange-400`, `--yellow-900`) are used for highlights, CTAs, and decorative elements.
+    *   **Neutrals:** A range of stone and slate grays provide the base for text and backgrounds.
+    *   **Gradients:** Custom linear gradients are defined for hero overlays, editorial sections, and the bespoke process section to create depth and visual interest.
+
+*   **Typography:**
+    *   **Font Family:** The primary font is `gliroyFonts`, with system UI fonts as fallbacks.
+    *   **Scale:** A responsive typography scale is defined with custom classes (e.g., `text-hero-mobile`, `text-h3-desktop`) to ensure consistent and legible text across all screen sizes.
+
+*   **Spacing & Sizing:**
+    *   The project uses a consistent spacing system based on Tailwind's defaults.
+    *   Custom padding and margin values are applied to create a breathable and balanced layout.
+
+*   **Border Radius & Shadows:**
+    *   A custom radius scale is defined (`--radius-sm`, `--radius-lg`, etc.). Most components use straight, sharp edges (`rounded-none`), giving the design a modern and crisp feel.
+    *   Two main box-shadow styles (`subtle` and `large`) are used to create elevation and depth for components like cards and buttons.
+
+## 3. Project & Component Architecture
+
+The codebase is organized logically, separating pages, reusable components, and UI primitives.
+
+*   **Directory Structure:**
+    *   `src/app/`: Contains the main entry point (`page.tsx`) and layout (`layout.tsx`).
+    *   `src/components/landing/`: Houses the major sections of the homepage (e.g., `HeroSection`, `CollectionSection`, `FaqSection`). Each section is a self-contained component.
+    *   `src/components/ui/`: Contains the full suite of ShadCN UI components, which serve as the building blocks for the application's interface.
+    *   `src/lib/`: Includes utility functions (`utils.ts`) and, crucially, a centralized `placeholder-images.json` file for managing all image assets. This makes updating imagery across the site highly efficient.
+
+*   **Key Components & Features:**
+    *   **Navbar:** A fixed navigation bar that becomes semi-transparent on scroll. It includes a mobile-friendly sheet menu.
+    *   **Hero Section:** A full-bleed hero with a background image, a gradient overlay, and an animated text rotator that cycles through key brand offerings.
+    *   **Category Grid:** A responsive grid of image cards that highlight different product categories.
+    *   **Collection Section:** A grid showcasing various apparel items, demonstrating the use of image cards with hover effects for secondary actions (wishlist, quick view).
+    *   **Bespoke Section:** A two-column layout explaining the tailoring process with icons and descriptive text.
+    *   **Carousels:** Used in the `EditorialSection` and `TestimonialsSection` to display content in a swipeable, horizontal format.
+    *   **FAQ Section:** An accordion-style component for displaying questions and answers.
+    *   **Footer:** A comprehensive footer with navigation links, social media icons, and a newsletter subscription form.
