@@ -2,122 +2,122 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "Modern office interior with people collaborating.",
-      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvZmZpY2V8ZW58MHx8fHwxNzYxOTI4MjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "office collaboration"
+      "description": "A man in a stylish suit looking forward.",
+      "imageUrl": "https://i.ibb.co/LzLzShdz/The-Oba-line.jpg",
+      "imageHint": "man suit"
     },
     {
       "id": "category-bespoke",
       "description": "Close-up of a tailor's hands working on a suit jacket.",
-      "imageUrl": "https://images.unsplash.com/photo-1633655442164-da26330e85b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdWl0JTIwdGFpbG9yaW5nfGVufDB8fHx8MTc2MTkyNDEyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/C5p0SSYw/Legacy-line.jpg",
       "imageHint": "suit tailoring"
     },
     {
       "id": "category-collections",
       "description": "A rack of elegant, colorful garments.",
-      "imageUrl": "https://images.unsplash.com/photo-1603400521630-9f2de124b33b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjbG90aGluZyUyMHJhY2t8ZW58MHx8fHwxNzYxODkyMTkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/pj1sY9cv/Vanguard-line.jpg",
       "imageHint": "clothing rack"
     },
     {
       "id": "category-tailoring",
       "description": "Vintage sewing machine with thread and fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1673786586360-19e8f8acb53f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2V3aW5nJTIwbWFjaGluZXxlbnwwfHx8fDE3NjE5MjQxMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/Z1tkq3Vn/The-Renaissance-Drop.jpg",
       "imageHint": "sewing machine"
     },
     {
       "id": "category-made-to-measure",
       "description": "A measuring tape draped over a dress form.",
-      "imageUrl": "https://images.unsplash.com/photo-1633009825635-e5d6eb2c27de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWVhc3VyaW5nJTIwdGFwZXxlbnwwfHx8fDE3NjE5MjQxMjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/1f3CgBwz/The-Renaissance-Drop-1.jpg",
       "imageHint": "measuring tape"
     },
     {
       "id": "category-accessories",
       "description": "A collection of luxury men's accessories like a watch and cufflinks.",
-      "imageUrl": "https://images.unsplash.com/photo-1748328160934-8926fa1d34c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3YXRjaCUyMGN1ZmZsaW5rc3xlbnwwfHx8fDE3NjE5MjQxMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/4Z0WhtF6/Vintage-shirts-1.jpg",
       "imageHint": "watch cufflinks"
     },
     {
       "id": "category-lookbook",
       "description": "A male model in a striking pose wearing high fashion.",
-      "imageUrl": "https://images.unsplash.com/photo-1627577279497-4b24bf1021b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYXNoaW9uJTIwbW9kZWx8ZW58MHx8fHwxNzYxOTAzMTE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/Lhh8X6s0/Vintage-shirts.jpg",
       "imageHint": "fashion model"
     },
     {
       "id": "category-studio",
       "description": "A well-lit fashion designer's studio with sketches and fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1483058712412-4245e9b90334?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkZXNpZ24lMjBzdHVkaW98ZW58MHx8fHwxNzYxODM3ODM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/KxbMf8Y4/Elevate-collection-1.jpg",
       "imageHint": "design studio"
     },
     {
       "id": "collection-1",
       "description": "A man in a vibrant, patterned agbada.",
-      "imageUrl": "https://images.unsplash.com/photo-1708170236215-b6edcad7f49a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhZnJpY2FuJTIwZmFzaGlvbnxlbnwwfHx8fDE3NjE5MjQxMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/nq3Qh7WV/Elevate-collection.jpg",
       "imageHint": "african fashion"
     },
     {
       "id": "collection-2",
       "description": "A modern tunic with clean lines and subtle details.",
-      "imageUrl": "https://images.unsplash.com/photo-1616506293697-c6acccb3bead?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWVucyUyMHR1bmljfGVufDB8fHx8MTc2MTkyNDEyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/wNs548x7/Legacy-Line.jpg",
       "imageHint": "mens tunic"
     },
     {
       "id": "collection-3",
       "description": "A tailored suit with a contemporary twist.",
-      "imageUrl": "https://images.unsplash.com/photo-1541380515484-a54f88a7cbe3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBzdWl0fGVufDB8fHx8MTc2MTkyNDEyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/N2GhVDnL/Odu-Collection.jpg",
       "imageHint": "modern suit"
     },
     {
       "id": "collection-4",
       "description": "A man wearing a stylish casual jacket.",
-      "imageUrl": "https://images.unsplash.com/photo-1611095006359-d237350a7e9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2FzdWFsJTIwamFja2V0fGVufDB8fHx8MTc2MTkyNDEyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/gZN6syW8/Refined-Motion-1.jpg",
       "imageHint": "casual jacket"
     },
     {
       "id": "editorial-1",
       "description": "An artistic shot of a model against an urban backdrop.",
-      "imageUrl": "https://images.unsplash.com/photo-1624338618005-0a93e308abae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx1cmJhbiUyMGZhc2hpb258ZW58MHx8fHwxNzYxOTI0MTIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/TyrCswr/Refined-Motion.jpg",
       "imageHint": "urban fashion"
     },
     {
       "id": "editorial-2",
       "description": "A close-up on the texture of a luxurious fabric.",
-      "imageUrl": "https://images.unsplash.com/photo-1594734415578-00fc9540929b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYWJyaWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc2MTg1NzQ2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/fzbY2Mwj/Roots-and-Royalty.jpg",
       "imageHint": "fabric texture"
     },
     {
       "id": "editorial-3",
       "description": "A model in motion, with fabric flowing.",
-      "imageUrl": "https://images.unsplash.com/photo-1653152767166-4b35e4325441?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmYXNoaW9uJTIwbW90aW9ufGVufDB8fHx8MTc2MTkyNDEyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/ymPMS635/Roots-and-Royalty.jpg",
       "imageHint": "fashion motion"
     },
     {
       "id": "editorial-4",
       "description": "Black and white portrait of a man in a Kunle Couture piece.",
-      "imageUrl": "https://images.unsplash.com/photo-1754746586621-8609c42a83b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwb3J0cmFpdCUyMGZhc2hpb258ZW58MHx8fHwxNzYxODczMjg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/twsmm2Qk/The-Advocate-series-1.jpg",
       "imageHint": "portrait fashion"
     },
     {
       "id": "editorial-5",
       "description": "A group of models showcasing a new collection.",
-      "imageUrl": "https://images.unsplash.com/photo-1743708825990-5ee3b68d82e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmYXNoaW9uJTIwY29sbGVjdGlvbnxlbnwwfHx8fDE3NjE5MTI4MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/1YQmhnfv/The-Advocate-series-2.jpg",
       "imageHint": "fashion collection"
     },
     {
       "id": "craft-construction",
       "description": "Detailed stitching on a garment collar.",
-      "imageUrl": "https://images.unsplash.com/photo-1714926312026-26b673d24e35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxmYWJyaWMlMjBkZXRhaWx8ZW58MHx8fHwxNzYxOTI0MTIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/Q78PmG22/The-Advocate-Series.jpg",
       "imageHint": "fabric detail"
     },
     {
       "id": "craft-fabric",
       "description": "Swatches of rich, colorful African print fabrics.",
-      "imageUrl": "https://images.unsplash.com/photo-1625471592808-3b848a6e9ffd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmYWJyaWMlMjBzd2F0Y2hlc3xlbnwwfHx8fDE3NjE5MTEzMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/SbJNGJV/The-Noble-Edit-1.jpg",
       "imageHint": "fabric swatches"
     },
     {
       "id": "craft-care",
       "description": "A clothing care label with symbols.",
-      "imageUrl": "https://images.unsplash.com/photo-1665390814870-e67fef1c0f4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnYXJtZW50JTIwY2FyZXxlbnwwfHx8fDE3NjE4NDk4NjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/ZpwTNqgv/The-noble-Edit.jpg",
       "imageHint": "garment care"
     }
   ]
