@@ -46,6 +46,7 @@ export default function BespokePage() {
                 data-ai-hint={bespokeHeroImage.imageHint}
                 />
             )}
+            <div className="absolute inset-0 bg-background-texture opacity-30"></div>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_0px_0px,rgba(0,0,0,0.15),rgba(0,0,0,0))]" />
             <div className="relative z-10 flex flex-col items-center p-4">
                 <h1 className="text-h1-mobile md:text-h1-desktop font-sans font-semibold text-amber-300 drop-shadow-lg">
