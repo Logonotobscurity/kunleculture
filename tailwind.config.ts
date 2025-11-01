@@ -72,6 +72,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        amber: {
+          300: '#FFDC61',
+        }
       },
       borderRadius: {
         lg: "0.5rem",
@@ -81,6 +84,7 @@ export default {
       boxShadow: {
         subtle: '0 1px 2px rgba(0,0,0,0.05)',
         large: '0 10px 15px rgba(0,0,0,0.1)',
+        'get-started': 'rgba(255,220,97,0.6) 0px -2px 15.667px 1.95838px',
       },
       backgroundImage: {
         'hero-overlay': 'linear-gradient(rgba(0,0,0,0) 19%, rgba(0,0,0,0.5) 100%, rgb(0,0,0) 112%)',
