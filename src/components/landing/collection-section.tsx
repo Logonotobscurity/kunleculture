@@ -80,7 +80,7 @@ export function CollectionSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {collections.map((item) => (
             <Card key={item.title} className="group overflow-hidden border-none shadow-subtle hover:shadow-large transition-shadow duration-300 rounded-none">
               <div className="relative">
@@ -90,7 +90,7 @@ export function CollectionSection() {
                     alt={item.image.description}
                     width={500}
                     height={650}
-                    className="object-cover w-full h-auto aspect-[4/5] transition-transform duration-300 group-hover:scale-105"
+                    className="object-cover w-full h-auto aspect-[1/1.25] transition-transform duration-300 group-hover:scale-105"
                     data-ai-hint={item.image.imageHint}
                   />
                 )}

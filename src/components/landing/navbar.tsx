@@ -47,7 +47,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
+                  "text-xl font-medium transition-colors hover:text-primary hover:underline hover:decoration-white decoration-[1.5008px]",
                   "text-foreground"
                 )}
               >

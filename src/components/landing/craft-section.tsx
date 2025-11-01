@@ -38,9 +38,9 @@ export function CraftSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {craftCards.map((card) => (
-            <Card key={card.title} className="flex flex-col group overflow-hidden shadow-subtle hover:shadow-large transition-all duration-300 rounded-none">
+            <Card key={card.title} className="flex flex-col group overflow-hidden shadow-subtle hover:shadow-large transition-all duration-300 rounded-none border-stone-300">
               {card.image && (
                 <div className="overflow-hidden">
                     <Image
@@ -53,13 +53,13 @@ export function CraftSection() {
                     />
                 </div>
               )}
-              <CardHeader>
-                <CardTitle className="text-2xl font-semibold text-foreground">{card.title}</CardTitle>
+              <CardHeader className="p-5">
+                <CardTitle className="text-xl font-semibold text-foreground">{card.title}</CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow">
+              <CardContent className="flex-grow p-5">
                 <p className="text-muted-foreground">{card.description}</p>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="p-5">
                 <Button variant="link" className="p-0 text-primary group-hover:text-accent">
                   Learn More <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                 </Button>
