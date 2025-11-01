@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/landing/navbar";
 import { HeroSection } from "@/components/landing/hero-section";
-import { CraftsmanshipSection } from "@/components/landing/craftsmanship-section";
+import { CategoryGrid } from "@/components/landing/category-grid";
 import { CollectionSection } from "@/components/landing/collection-section";
 import { BespokeSection } from "@/components/landing/bespoke-section";
 import { TestimonialsSection } from "@/components/landing/testimonials-section";
@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <HeroSection />
-        <CraftsmanshipSection />
+        <CategoryGrid />
         <CollectionSection />
         <BespokeSection />
         <TestimonialsSection />
