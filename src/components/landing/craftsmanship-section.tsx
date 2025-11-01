@@ -10,6 +10,21 @@ export function CraftsmanshipSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="py-8 md:py-12">
           <div className="relative z-[2] text-amber-300">
+            <div className="absolute inset-0 -z-[1] rounded-lg overflow-hidden">
+                {craftImage && (
+                    <video
+                        poster={craftImage.imageUrl}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover -z-10"
+                    >
+                        <source src="/videos/craft-video.mp4" type="video/mp4" />
+                    </video>
+                )}
+              <div className="absolute inset-0 bg-black/50" />
+            </div>
             <div className="flex flex-col justify-between min-h-[567px] p-5 md:min-h-[588px] md:p-10">
               <div className="flex flex-col items-start gap-4">
                 <Image src="https://i.ibb.co/wZdhvsgF/kunlecouture-logo.png" alt="kunlecouture-logo" width={150} height={40} className="object-contain brightness-0 invert opacity-80" />
@@ -38,21 +53,6 @@ export function CraftsmanshipSection() {
                   </Button>
                 </div>
               </div>
-            </div>
-            <div className="absolute inset-0 -z-[1] rounded-lg overflow-hidden">
-                {craftImage && (
-                    <video
-                        poster={craftImage.imageUrl}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="absolute inset-0 w-full h-full object-cover -z-10"
-                    >
-                        <source src="/videos/craft-video.mp4" type="video/mp4" />
-                    </video>
-                )}
-              <div className="absolute inset-0 bg-black/50" />
             </div>
           </div>
         </div>
