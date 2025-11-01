@@ -16,7 +16,7 @@ const testimonials = [
       image: PlaceHolderImages.find(p => p.id === 'editorial-4'),
     },
     {
-      quote: "As a collector of fine tailoring, Kunle Couture stands out. They masterfully blend African heritage with a sharp, contemporary aesthetic.",
+      quote: "Request Quote",
       name: "Michael B.",
       title: "Art Collector",
       image: PlaceHolderImages.find(p => p.id === 'collection-3'),
