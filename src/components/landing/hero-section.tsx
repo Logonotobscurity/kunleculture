@@ -27,7 +27,7 @@ export function HeroSection() {
           <Button size="lg" className="bg-white text-black hover:bg-stone-200 rounded-full shadow-large">
             Explore Collection
           </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 rounded-full backdrop-blur-sm">
+          <Button size="lg" className="rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large">
             Book Bespoke
           </Button>
         </div>
