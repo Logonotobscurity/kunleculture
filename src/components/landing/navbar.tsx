@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, User } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { KunleLogo } from "../icons";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#", label: "Shop" },
@@ -38,7 +38,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-[57px]">
           <Link href="/" className="flex items-center gap-2">
-            <KunleLogo className="h-6 w-auto transition-colors text-foreground" />
+            <Image src="https://i.ibb.co/HppVNSzb/Kunlecouture.jpg" alt="Kunlecouture" width={140} height={20} className="object-contain" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -46,10 +46,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={cn(
-                  "text-xl font-medium transition-colors hover:text-primary hover:underline hover:decoration-white decoration-[1.5008px]",
-                  "text-foreground"
-                )}
+                className="text-lg font-medium transition-colors hover:text-primary"
               >
                 {link.label}
               </Link>
@@ -64,7 +61,7 @@ export function Navbar() {
             <div className="md:hidden">
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className={cn("h-12 w-12", "text-foreground")}>
+                  <Button variant="ghost" size="icon" className="h-12 w-12 text-foreground">
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Open menu</span>
                   </Button>
@@ -73,7 +70,7 @@ export function Navbar() {
                     <div className="flex flex-col h-full">
                         <div className="flex items-center justify-between p-4 border-b">
                             <Link href="/">
-                                <KunleLogo className="h-6 w-auto text-foreground" />
+                                <Image src="https://i.ibb.co/HppVNSzb/Kunlecouture.jpg" alt="Kunlecouture" width={140} height={20} className="object-contain" />
                             </Link>
                             <SheetClose asChild>
                                 <Button variant="ghost" size="icon">
