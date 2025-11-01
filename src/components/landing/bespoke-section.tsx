@@ -36,10 +36,10 @@ export function BespokeSection() {
             <div className="w-full md:max-w-[calc(100%_-_46.5px)]">
                 <div className="mb-8 md:mb-0">
                     <span className="block h-0.5 w-20 bg-accent mb-5"></span>
-                    <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-yellow-900">
+                    <h2 className="text-[36.327px] md:text-[56.0514px] font-bold leading-[34.8739px] md:leading-[56.0514px] tracking-[-0.72px] md:tracking-[-1.4px] font-sans text-yellow-900">
                         The Art of Bespoke
                     </h2>
-                    <p className="mt-4 text-lg text-yellow-900/80 max-w-2xl">
+                    <p className="mt-4 text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-[-0.32px] md:tracking-[-0.4px] text-yellow-900/80 max-w-2xl">
                         Experience the art of true craftsmanship with a garment made exclusively for you. Our bespoke service is a journey of collaboration, precision, and personalization.
                     </p>
                 </div>
@@ -48,7 +48,7 @@ export function BespokeSection() {
                 <div className="grid gap-8 md:grid-cols-2">
                     {processSteps.map((step) => (
                         <div key={step.title} className="flex items-start gap-4">
-                            <div className="bg-white/50 rounded-full p-3 border border-yellow-900/20 shadow-lg">
+                            <div className="bg-white/10 p-3 rounded-full">
                                 {step.icon}
                             </div>
                             <div>
@@ -59,10 +59,10 @@ export function BespokeSection() {
                     ))}
                 </div>
                  <div className="mt-12 flex gap-4">
-                    <Button size="lg" className="rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large">
+                    <Button size="lg" className="rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large px-16 py-2.5 md:py-3.5 text-base md:text-xl">
                         Book Appointment
                     </Button>
-                    <Button size="lg" variant="outline" className="rounded-full border-yellow-900 text-yellow-900 hover:bg-yellow-900/10">
+                    <Button size="lg" variant="outline" className="rounded-full border-yellow-900 text-yellow-900 hover:bg-yellow-900/10 px-16 py-2.5 md:py-3.5 text-base md:text-xl">
                         How It Works
                     </Button>
                 </div>

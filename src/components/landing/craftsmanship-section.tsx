@@ -16,12 +16,12 @@ export function CraftsmanshipSection() {
               </div>
               <div className="max-w-md">
                 <div className="mb-4">
-                  <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white">
+                  <h2 className="text-[48.7885px] md:text-[96.359px] font-semibold leading-[58.5462px] md:leading-[115.631px] tracking-[-3.8992px] md:tracking-[2.40898px] text-white">
                     Our Tradition <em className="font-serif not-italic">Can</em> Be Worn
                   </h2>
                 </div>
                 <div className="mb-8 md:mb-12">
-                  <p className="md:text-lg text-white/80">
+                  <p className="text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-[-0.32px] md:tracking-[-0.4px] text-white/80">
                     Conventional fashion gets conventional results. Our pieces are crafted by rewiring traditional techniques to help you express yourself.
                   </p>
                 </div>
@@ -29,7 +29,7 @@ export function CraftsmanshipSection() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-amber-300 text-amber-300 hover:bg-amber-300 hover:text-black rounded-full"
+                    className="border-amber-300 text-amber-300 hover:bg-amber-300 hover:text-black rounded-full px-16 py-2.5 md:py-3.5 text-base md:text-xl"
                   >
                     Why Bespoke
                   </Button>

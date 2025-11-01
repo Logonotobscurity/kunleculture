@@ -11,9 +11,9 @@ const testimonials = [
       image: PlaceHolderImages.find(p => p.id === 'editorial-1'),
     },
     {
-      quote: "I've never felt more confident than in my Kunle Couture suit. It commands respect and admiration wherever I go. The entire process was a luxury experience.",
-      name: "David C.",
-      title: "Barrister",
+      quote: "Request Quote",
+      name: "",
+      title: "",
       image: PlaceHolderImages.find(p => p.id === 'editorial-4'),
     },
     {
@@ -46,7 +46,7 @@ export function TestimonialsSection() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
                     <div className="max-w-xl">
-                        <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
+                        <h2 className="text-[36.327px] md:text-[56.0514px] font-bold leading-[34.8739px] md:leading-[56.0514px] tracking-[-0.72px] md:tracking-[-1.4px] font-sans text-foreground">
                             This experience actually changes lives. Don’t just take it from us.
                         </h2>
                     </div>
@@ -90,7 +90,7 @@ export function TestimonialsSection() {
                                         )}
                                     </div>
                                     <div>
-                                        <blockquote className="text-lg font-medium text-foreground mb-4">
+                                        <blockquote className="text-[16px] md:text-[20px] leading-[24px] md:leading-[30px] tracking-[-0.32px] md:tracking-[-0.4px] font-medium text-foreground mb-4">
                                             “{testimonial.quote}”
                                         </blockquote>
                                         {testimonial.name && (

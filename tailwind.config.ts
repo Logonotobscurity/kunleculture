@@ -12,7 +12,7 @@ export default {
       center: true,
       padding: '2rem',
       screens: {
-        '2xl': '1400px',
+        '2xl': '1760px',
       },
     },
     extend: {
@@ -27,6 +27,16 @@ export default {
         'h3-mobile': ['22px', '22px'],
         'h3-desktop': ['50px', '48.6px'],
         'small': ['12px', '15.6px'],
+        'sm': '14px',
+        'base': '16px',
+        'lg': '18px',
+        'xl': '20px',
+        '2xl': '24px',
+        '3xl': '30px',
+        '4xl': '36px',
+        '5xl': '48px',
+        '6xl': '60px',
+        '7xl': '72px',
       },
       colors: {
         border: "hsl(var(--border))",
@@ -64,13 +74,13 @@ export default {
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "0.5rem",
+        md: "calc(0.5rem - 2px)",
+        sm: "calc(0.5rem - 4px)",
       },
       boxShadow: {
-        subtle: 'rgba(0,0,0,0.05) 0px 2px 10px 0, rgba(0,0,0,0.05) 0px 2px 16px 0px',
-        large: 'rgba(0,0,0,0.1) 0px 4px 8px 0px',
+        subtle: '0 1px 2px rgba(0,0,0,0.05)',
+        large: '0 10px 15px rgba(0,0,0,0.1)',
       },
       backgroundImage: {
         'hero-overlay': 'linear-gradient(rgba(0,0,0,0) 19%, rgba(0,0,0,0.5) 100%, rgb(0,0,0) 112%)',
