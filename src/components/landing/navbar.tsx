@@ -26,7 +26,7 @@ export function Navbar() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        hasScrolled ? "bg-background/80 shadow-sm backdrop-blur-sm" : "bg-background"
+        hasScrolled ? "bg-background/80 shadow-sm backdrop-blur-sm" : "bg-transparent"
       )}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -40,7 +40,10 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+                className={cn(
+                  "text-lg font-medium transition-colors hover:text-primary",
+                  hasScrolled ? "text-foreground" : "text-white"
+                  )}
               >
                 {link.label}
               </Link>
@@ -55,7 +58,7 @@ export function Navbar() {
             <div className="md:hidden">
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="h-12 w-12 text-foreground">
+                  <Button variant="ghost" size="icon" className={cn("h-12 w-12", hasScrolled ? "text-foreground" : "text-white")}>
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Open menu</span>
                   </Button>

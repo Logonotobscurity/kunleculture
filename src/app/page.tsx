@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
       <Navbar />
-      <main className="flex-1 pt-[57px]">
+      <main className="flex-1">
         <HeroSection />
         <CraftsmanshipSection />
         <CollectionSection />
