@@ -125,6 +125,12 @@
       "description": "A close-up of a tailor's hands at work on a garment.",
       "imageUrl": "https://i.ibb.co/9hbd4bF/craft-video-poster.jpg",
       "imageHint": "tailor hands"
+    },
+    {
+      "id": "about-hero",
+      "description": "Founder of Kunle Couture sketching a design in his studio.",
+      "imageUrl": "https://i.ibb.co/L9pLFmD/about-hero.jpg",
+      "imageHint": "designer sketching"
     }
   ]
 }
