@@ -28,7 +28,7 @@ const testimonials = [
       image: PlaceHolderImages.find(p => p.id === 'hero-background'),
     },
     {
-      quote: "From the initial consultation to the final fitting, the experience was seamless. True professionals who are masters of their craft.",
+      quote: "Request Quote",
       name: "Tunde A.",
       title: "CEO",
       image: PlaceHolderImages.find(p => p.id === 'editorial-2'),
