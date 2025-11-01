@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import Link from "next/link";
 
 const testimonials = [
     {
@@ -21,17 +22,21 @@ const testimonials = [
       title: "Art Collector",
       image: PlaceHolderImages.find(p => p.id === 'collection-3'),
     },
-     {
-      quote: "The team's craftsmanship is second to none. I commissioned a piece for my wedding and it was the star of the show. Highly recommended.",
-      name: "Samuel E.",
-      title: "Groom",
-      image: PlaceHolderImages.find(p => p.id === 'hero-background'),
+    {
+        quote: "Explore Bespoke",
+        name: "Custom Tailoring",
+        title: "Your vision, our craftsmanship.",
+        image: PlaceHolderImages.find(p => p.id === 'hero-background'),
+        isCta: true,
+        href: "#"
     },
     {
-      quote: "Request Quote",
-      name: "Tunde A.",
-      title: "CEO",
-      image: PlaceHolderImages.find(p => p.id === 'editorial-2'),
+        quote: "View Lookbook",
+        name: "Inspiration Gallery",
+        title: "See the latest collection.",
+        image: PlaceHolderImages.find(p => p.id === 'editorial-2'),
+        isCta: true,
+        href: "#"
     }
 ]
 
@@ -52,30 +57,51 @@ export function TestimonialsSection() {
                 <div className="flex overflow-x-auto space-x-6 pb-8 -mx-4 px-4">
                     {testimonials.map((testimonial, index) => (
                         <div key={index} className="flex-shrink-0 w-[80vw] md:w-[30vw]">
-                            <div className="flex flex-col h-full">
-                                <div className="relative w-full aspect-[4/5] rounded-lg overflow-hidden mb-4 shadow-large">
-                                    {testimonial.image && (
-                                        <Image
-                                            src={testimonial.image.imageUrl}
-                                            alt={testimonial.name}
-                                            fill
-                                            className="object-cover"
-                                            data-ai-hint={testimonial.image.imageHint}
-                                        />
-                                    )}
-                                </div>
-                                <div>
-                                    <blockquote className="text-lg font-medium text-foreground mb-4">
-                                        “{testimonial.quote}”
-                                    </blockquote>
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-3 h-3 bg-pink-900 rounded-full shadow-[0_0_12px_3px] shadow-pink-900/50"></div>
-                                        <p className="font-semibold uppercase tracking-wide text-sm">
-                                            {testimonial.name}, <span className="text-muted-foreground">{testimonial.title}</span>
-                                        </p>
+                             {testimonial.isCta ? (
+                                 <Link href={testimonial.href || '#'} className="block h-full group">
+                                    <div className="relative flex flex-col items-center justify-center text-center w-full h-full aspect-[4/5] rounded-lg overflow-hidden shadow-large bg-black/30 p-8 text-white">
+                                        {testimonial.image && (
+                                            <Image
+                                                src={testimonial.image.imageUrl}
+                                                alt={testimonial.name}
+                                                fill
+                                                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                                data-ai-hint={testimonial.image.imageHint}
+                                            />
+                                        )}
+                                        <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors"></div>
+                                        <div className="relative z-10">
+                                            <h3 className="text-3xl font-bold font-sans">{testimonial.quote}</h3>
+                                            <p className="mt-2 text-white/80">{testimonial.title}</p>
+                                        </div>
+                                    </div>
+                                </Link>
+                             ) : (
+                                <div className="flex flex-col h-full">
+                                    <div className="relative w-full aspect-[4/5] rounded-lg overflow-hidden mb-4 shadow-large">
+                                        {testimonial.image && (
+                                            <Image
+                                                src={testimonial.image.imageUrl}
+                                                alt={testimonial.name}
+                                                fill
+                                                className="object-cover"
+                                                data-ai-hint={testimonial.image.imageHint}
+                                            />
+                                        )}
+                                    </div>
+                                    <div>
+                                        <blockquote className="text-lg font-medium text-foreground mb-4">
+                                            “{testimonial.quote}”
+                                        </blockquote>
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-3 h-3 bg-pink-900 rounded-full shadow-[0_0_12px_3px] shadow-pink-900/50"></div>
+                                            <p className="font-semibold uppercase tracking-wide text-sm">
+                                                {testimonial.name}, <span className="text-muted-foreground">{testimonial.title}</span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                             )}
                         </div>
                     ))}
                 </div>
