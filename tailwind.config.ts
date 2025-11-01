@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["'Sofia Pro'", '-apple-system', 'BlinkMacSystemFont', "'Segoe UI'", 'sans-serif'],
+        sans: ['gliroyFonts', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'hero-mobile': ['25px', '24.75px'],
@@ -64,12 +64,9 @@ export default {
         },
       },
       borderRadius: {
-        lg: "var(--radius-lg)",
-        md: "calc(var(--radius-lg) - 8px)", // sm
-        sm: "calc(var(--radius-lg) - 12px)", // xs
-        xl: "var(--radius-xl)",
-        '2xl': "var(--radius-2xl)",
-        full: "var(--radius-full)",
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
         subtle: 'rgba(0,0,0,0.05) 0px 2px 10px 0, rgba(0,0,0,0.05) 0px 2px 16px 0px',

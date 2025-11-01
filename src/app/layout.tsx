@@ -15,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="stylesheet" href="https://use.typekit.net/jhs3vje.css" />
-      </head>
+      <head />
       <body className={cn("antialiased")}>
         {children}
         <Toaster />
