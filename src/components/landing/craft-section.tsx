@@ -40,7 +40,7 @@ export function CraftSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {craftCards.map((card) => (
-            <Card key={card.title} className="flex flex-col group overflow-hidden rounded-xl shadow-subtle hover:shadow-large transition-all duration-300">
+            <Card key={card.title} className="flex flex-col group overflow-hidden shadow-subtle hover:shadow-large transition-all duration-300 rounded-none">
               {card.image && (
                 <div className="overflow-hidden">
                     <Image

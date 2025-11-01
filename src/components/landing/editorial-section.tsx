@@ -47,7 +47,7 @@ export function EditorialSection() {
                 {editorialContent.map((item, index) => (
                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                         <div className="p-1">
-                            <Card className="overflow-hidden rounded-xl shadow-large">
+                            <Card className="overflow-hidden shadow-large rounded-none">
                                 <CardContent className="relative flex aspect-video items-center justify-center p-0">
                                     {item.image && (
                                         <Image

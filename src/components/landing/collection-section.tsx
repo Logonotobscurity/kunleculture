@@ -82,7 +82,7 @@ export function CollectionSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {collections.map((item) => (
-            <Card key={item.title} className="group overflow-hidden rounded-xl border-none shadow-subtle hover:shadow-large transition-shadow duration-300">
+            <Card key={item.title} className="group overflow-hidden border-none shadow-subtle hover:shadow-large transition-shadow duration-300 rounded-none">
               <div className="relative">
                 {item.image && (
                   <Image
