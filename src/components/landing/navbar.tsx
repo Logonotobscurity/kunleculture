@@ -32,7 +32,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-[57px]">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="https://i.ibb.co/wZdhvsgF/kunlecouture-logo.png" alt="kunlecouture-logo" width={249} height={33} className="object-contain" />
+            <Image src="https://i.ibb.co/wZdhvsgF/kunlecouture-logo.png" alt="kunlecouture-logo" width={250} height={33} className="object-contain" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -64,7 +64,7 @@ export function Navbar() {
                     <div className="flex flex-col h-full">
                         <div className="flex items-center justify-between p-4 border-b">
                             <Link href="/">
-                                <Image src="https://i.ibb.co/wZdhvsgF/kunlecouture-logo.png" alt="kunlecouture-logo" width={249} height={33} className="object-contain" />
+                                <Image src="https://i.ibb.co/wZdhvsgF/kunlecouture-logo.png" alt="kunlecouture-logo" width={250} height={33} className="object-contain" />
                             </Link>
                             <SheetClose asChild>
                                 <Button variant="ghost" size="icon">
