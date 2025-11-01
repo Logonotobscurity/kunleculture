@@ -19,7 +19,7 @@ export function HeroSection() {
                 data-ai-hint={heroImage.imageHint}
                 />
             )}
-            <div className="absolute inset-0 bg-hero-overlay" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_0px_0px,rgba(0,0,0,0.15),rgba(0,0,0,0))]" />
             <div className="relative z-10 flex flex-col items-center p-4">
                 <div className="h-[120px] md:h-[240px] flex items-center">
                     <AnimatedText />

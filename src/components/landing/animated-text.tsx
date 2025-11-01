@@ -43,7 +43,7 @@ export function AnimatedText() {
   }, [displayedText, isDeleting, currentIndex]);
 
   return (
-    <h1 className="text-[48.7885px] md:text-[96.359px] font-semibold leading-[58.5462px] md:leading-[115.631px] tracking-[-3.8992px] md:tracking-[2.40898px] text-white drop-shadow-lg">
+    <h1 className="text-[48.7885px] md:text-[96.359px] font-semibold leading-[58.5462px] md:leading-[115.631px] tracking-[-3.8992px] md:tracking-[2.40898px] text-amber-300 drop-shadow-lg">
       {displayedText}
       <span className="animate-ping">|</span>
     </h1>
