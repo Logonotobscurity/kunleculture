@@ -18,8 +18,8 @@ const testimonials = [
     },
     {
       quote: "Request Quote",
-      name: "Michael B.",
-      title: "Art Collector",
+      name: "",
+      title: "",
       image: PlaceHolderImages.find(p => p.id === 'collection-3'),
     },
     {
@@ -93,12 +93,15 @@ export function TestimonialsSection() {
                                         <blockquote className="text-lg font-medium text-foreground mb-4">
                                             “{testimonial.quote}”
                                         </blockquote>
+                                        {testimonial.name && (
                                         <div className="flex items-center gap-3">
                                             <div className="w-3 h-3 bg-pink-900 rounded-full shadow-[0_0_12px_3px] shadow-pink-900/50"></div>
                                             <p className="font-semibold uppercase tracking-wide text-sm">
-                                                {testimonial.name}, <span className="text-muted-foreground">{testimonial.title}</span>
+                                                {testimonial.name}{testimonial.title && ", "}
+                                                <span className="text-muted-foreground">{testimonial.title}</span>
                                             </p>
                                         </div>
+                                        )}
                                     </div>
                                 </div>
                              )}
