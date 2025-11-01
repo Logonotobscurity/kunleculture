@@ -44,6 +44,26 @@ const collections = [
     title: "Roots and Royalty",
     price: "720",
     image: PlaceHolderImages.find((p) => p.id === "editorial-2"),
+  },
+  {
+    title: "The Oba Line",
+    price: "Request for Quote",
+    image: PlaceHolderImages.find((p) => p.id === "hero-background")
+  },
+  {
+    title: "Legacy Line",
+    price: "Request for Quote",
+    image: PlaceHolderImages.find((p) => p.id === "category-bespoke")
+  },
+  {
+    title: "Vanguard Line",
+    price: "Request for Quote",
+    image: PlaceHolderImages.find((p) => p.id === "category-collections")
+  },
+  {
+    title: "The Renaissance Drop",
+    price: "Request for Quote",
+    image: PlaceHolderImages.find((p) => p.id === "category-tailoring")
   }
 ];
 
@@ -85,7 +105,7 @@ export function CollectionSection() {
               </div>
               <CardContent className="p-4 bg-background">
                 <h3 className="font-semibold text-lg text-foreground">{item.title}</h3>
-                <p className="text-muted-foreground mt-1">${item.price}</p>
+                <p className="text-muted-foreground mt-1 font-medium">Request for Quote</p>
               </CardContent>
             </Card>
           ))}
