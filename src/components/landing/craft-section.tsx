@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
@@ -38,7 +39,7 @@ export function CraftSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
           {craftCards.map((card) => (
             <Card key={card.title} className="flex flex-col group overflow-hidden shadow-subtle hover:shadow-large transition-all duration-300 rounded-none border-stone-300">
               {card.image && (

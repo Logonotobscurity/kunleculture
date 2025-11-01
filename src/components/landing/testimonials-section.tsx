@@ -1,7 +1,9 @@
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const testimonials = [
     {
@@ -54,9 +56,9 @@ export function TestimonialsSection() {
                         See more reviews
                     </Button>
                 </div>
-                <div className="flex overflow-x-auto space-x-6 pb-8 -mx-4 px-4">
+                <div className="flex overflow-x-auto space-x-6 pb-8 snap-x snap-mandatory">
                     {testimonials.map((testimonial, index) => (
-                        <div key={index} className="flex-shrink-0 w-[80vw] md:w-[30vw]">
+                        <div key={index} className={cn("flex-shrink-0 snap-center", "w-[90%] md:w-[30vw]")}>
                              {testimonial.isCta ? (
                                  <Link href={testimonial.href || '#'} className="block h-full group">
                                     <div className="relative flex flex-col items-center justify-center text-center w-full h-full aspect-[4/5] rounded-lg overflow-hidden shadow-large bg-black/30 p-8 text-white">
