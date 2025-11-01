@@ -51,7 +51,7 @@ export default function BespokePage() {
                 <h1 className="text-h1-mobile md:text-h1-desktop font-sans font-semibold text-amber-300 drop-shadow-lg">
                     The Art of You
                 </h1>
-                <p className="mt-4 text-lg md:text-xl text-white/80 max-w-3xl">
+                <p className="mt-4 text-lg md:text-xl text-stone-900 max-w-3xl">
                     Experience the pinnacle of personalization with a Kunle Couture bespoke garment, crafted exclusively for your body, style, and story.
                 </p>
                  <Button size="lg" className="mt-8 rounded-full bg-white text-black hover:bg-stone-200 shadow-large px-10">
