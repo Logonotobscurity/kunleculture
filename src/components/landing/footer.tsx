@@ -35,7 +35,7 @@ export function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4 flex flex-col">
             <Link href="#" className="mb-4">
-               <Image src="https://i.ibb.co/wZdhvsgF/kunlecouture-logo.png" alt="kunlecouture-logo" width={180} height={24} className="object-contain brightness-0 invert" />
+               <Image src="https://i.ibb.co/wZdhvsgF/kunlecouture-logo.png" alt="kunlecouture-logo" width={249} height={33} className="object-contain brightness-0 invert" />
             </Link>
             <p className="text-sm text-white/70 mb-6 max-w-sm">
                 Kunle Couture is a contemporary luxury menswear brand that fuses the artistry of traditional African tailoring with modern design sensibilities.
