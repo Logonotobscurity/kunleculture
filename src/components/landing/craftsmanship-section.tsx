@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
+import { KunleLogo } from "../icons";
 
 export function CraftsmanshipSection() {
   const craftImage = PlaceHolderImages.find(p => p.id === 'craftsmanship-video-poster');
@@ -27,7 +28,7 @@ export function CraftsmanshipSection() {
             </div>
             <div className="flex flex-col justify-between min-h-[567px] p-5 md:min-h-[588px] md:p-10">
               <div className="flex flex-col items-start gap-4">
-                <Image src="https://i.ibb.co/wZdhvsgF/kunlecouture-logo.png" alt="kunlecouture-logo" width={150} height={40} className="object-contain brightness-0 invert opacity-80" />
+                <KunleLogo className="w-[150px] h-auto text-white/80" />
                 <div className="text-sm font-bold tracking-wider uppercase text-left">
                     The Soul of Craft
                 </div>

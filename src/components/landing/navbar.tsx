@@ -6,8 +6,8 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { navLinks } from "@/lib/constants";
+import { KunleLogo } from "../icons";
 
 export function Navbar() {
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -32,7 +32,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-[57px]">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="https://i.ibb.co/wZdhvsgF/kunlecouture-logo.png" alt="kunlecouture-logo" width={200} height={100} className="w-[150px] md:w-[200px] h-auto" />
+            <KunleLogo className={cn("w-[150px] md:w-[200px] h-auto", hasScrolled ? "text-primary" : "text-white")} />
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -67,7 +67,7 @@ export function Navbar() {
                     <div className="flex flex-col h-full">
                         <div className="flex items-center justify-between p-4 border-b">
                             <Link href="/">
-                                <Image src="https://i.ibb.co/wZdhvsgF/kunlecouture-logo.png" alt="kunlecouture-logo" width={200} height={100} className="w-[180px] h-auto" />
+                                <KunleLogo className="w-[180px] h-auto text-primary" />
                             </Link>
                             <SheetClose asChild>
                                 <Button variant="ghost" size="icon">

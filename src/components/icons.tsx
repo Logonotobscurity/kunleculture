@@ -13,7 +13,6 @@ export const KunleLogo = ({ className }: { className?: string }) => (
       fontSize="20"
       fontWeight="700"
       letterSpacing="1"
-      fill="currentColor"
     >
       KUNLE COUTURE
     </text>
