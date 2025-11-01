@@ -11,8 +11,11 @@ export function CraftsmanshipSection() {
         <div className="py-8 md:py-12">
           <div className="relative z-[2] text-amber-300">
             <div className="flex flex-col justify-between min-h-[567px] p-5 md:min-h-[588px] md:p-10">
-              <div className="text-sm font-bold tracking-wider uppercase text-left">
-                The Soul of Craft
+              <div className="flex flex-col items-start gap-4">
+                <Image src="https://i.ibb.co/wZdhvsgF/kunlecouture-logo.png" alt="kunlecouture-logo" width={150} height={40} className="object-contain brightness-0 invert opacity-80" />
+                <div className="text-sm font-bold tracking-wider uppercase text-left">
+                    The Soul of Craft
+                </div>
               </div>
               <div className="max-w-md">
                 <div className="mb-4">
