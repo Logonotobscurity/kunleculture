@@ -47,12 +47,12 @@ export default function BespokePage() {
                 />
             )}
             <div className="absolute inset-0 bg-background-texture opacity-30"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_0px_0px,rgba(0,0,0,0.15),rgba(0,0,0,0))]" />
+            <div className="absolute inset-0 bg-black/50" />
             <div className="relative z-10 flex flex-col items-center p-4">
                 <h1 className="text-h1-mobile md:text-h1-desktop font-sans font-semibold text-amber-300 drop-shadow-lg">
                     The Art of You
                 </h1>
-                <p className="mt-4 text-lg md:text-xl text-stone-900 max-w-3xl">
+                <p className="mt-4 text-lg md:text-xl text-white max-w-3xl">
                     Experience the pinnacle of personalization with a Kunle Couture bespoke garment, crafted exclusively for your body, style, and story.
                 </p>
                  <Button size="lg" className="mt-8 rounded-full bg-white text-black hover:bg-stone-200 shadow-large px-10">
