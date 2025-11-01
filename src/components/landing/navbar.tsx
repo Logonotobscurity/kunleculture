@@ -6,7 +6,7 @@ import { Menu, X, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { KunleLogo } from "@/components/icons";
+import Image from 'next/image';
 
 const navLinks = [
   { href: "#", label: "Shop" },
@@ -38,7 +38,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-[57px]">
           <Link href="/" className="flex items-center gap-2">
-            <KunleLogo className={cn("h-6 w-auto transition-colors", "text-foreground")} />
+            <Image src="https://i.ibb.co/HppVNSzb/Kunlecouture.jpg" alt="Kunlecouture" width={140} height={24} />
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
@@ -73,7 +73,7 @@ export function Navbar() {
                     <div className="flex flex-col h-full">
                         <div className="flex items-center justify-between p-4 border-b">
                             <Link href="/">
-                                <KunleLogo className="h-6 w-auto text-foreground" />
+                                <Image src="https://i.ibb.co/HppVNSzb/Kunlecouture.jpg" alt="Kunlecouture" width={140} height={24} />
                             </Link>
                             <SheetClose asChild>
                                 <Button variant="ghost" size="icon">
