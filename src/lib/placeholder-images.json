@@ -119,6 +119,12 @@
       "description": "A clothing care label with symbols.",
       "imageUrl": "https://i.ibb.co/ZpwTNqgv/The-noble-Edit.jpg",
       "imageHint": "garment care"
+    },
+    {
+      "id": "craftsmanship-video-poster",
+      "description": "A close-up of a tailor's hands at work on a garment.",
+      "imageUrl": "https://i.ibb.co/9hbd4bF/craft-video-poster.jpg",
+      "imageHint": "tailor hands"
     }
   ]
 }
