@@ -42,7 +42,17 @@ The project uses a well-defined, token-based design system that reflects the Kun
     *   A custom radius scale is defined (`--radius-sm`, `--radius-lg`, etc.). Most components use straight, sharp edges (`rounded-none`), giving the design a modern and crisp feel.
     *   Two main box-shadow styles (`subtle` and `large`) are used to create elevation and depth for components like cards and buttons.
 
-## 3. Project & Component Architecture
+## 3. Bespoke Section Analysis
+
+The `BespokeSection` serves as a key informational component, detailing the custom tailoring process.
+
+*   **Layout:** It employs a responsive two-column layout. On desktop screens, it splits content between a descriptive section on the left and a grid of process steps on the right. On mobile, these sections stack vertically.
+*   **Background Styling:** The section features a layered background effect. It combines a custom linear gradient (`bg-tailoring-process`), which transitions from a light blue-gray to a warm yellow, with a subtle texture image (`bg-background-texture`) overlay. This creates a rich, tactile feel that aligns with the theme of craftsmanship.
+*   **Typography & Color:** The heading and descriptive text use a distinct yellow color (`text-yellow-900`), setting it apart from other sections. An accent-colored line (`bg-accent`) provides a visual anchor for the section title.
+*   **Iconography:** Each step in the process is accompanied by an icon from `lucide-react`, visually representing the stage (e.g., Consultation, Measurements). These icons are housed within circular, semi-transparent backgrounds with a subtle shadow, making them stand out.
+*   **Interactivity:** The section includes two primary calls-to-action: "Book Appointment" and "How It Works". These buttons use the brand's yellow and outline styles, respectively, providing clear next steps for the user.
+
+## 4. Project & Component Architecture
 
 The codebase is organized logically, separating pages, reusable components, and UI primitives.
 
