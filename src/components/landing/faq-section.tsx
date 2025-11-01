@@ -4,6 +4,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -32,24 +34,32 @@ export function FaqSection() {
   return (
     <section className="w-full py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
-            Your Questions, Answered
-          </h2>
-        </div>
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left text-xl font-semibold hover:no-underline text-foreground">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground pt-2">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+        <div className="flex flex-col md:flex-row gap-12 md:gap-16">
+          <div className="w-full md:w-1/3">
+            <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
+              Your Questions, Answered
+            </h2>
+          </div>
+          <div className="w-full md:w-2/3">
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left text-xl md:text-2xl font-semibold hover:no-underline text-foreground">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base md:text-lg text-muted-foreground pt-2 pr-8">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+            <div className="mt-8 md:mt-12">
+              <Link href="#" className="inline-flex items-center gap-2 font-medium text-primary hover:text-accent">
+                See more
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
