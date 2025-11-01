@@ -9,6 +9,7 @@ import { NewsletterSection } from "@/components/landing/newsletter-section";
 
 export default function AboutPage() {
   const aboutHeroImage = PlaceHolderImages.find((p) => p.id === "about-hero");
+  const storyImage = PlaceHolderImages.find((p) => p.id === "category-tailoring");
 
   const values = [
     "Uncompromising Quality",
@@ -64,14 +65,14 @@ export default function AboutPage() {
                 </Button>
               </div>
               <div>
-                {aboutHeroImage && (
+                {storyImage && (
                     <Image
-                        src={aboutHeroImage.imageUrl}
-                        alt="Detailed view of fabric"
+                        src={storyImage.imageUrl}
+                        alt={storyImage.description}
                         width={600}
                         height={700}
-                        className="object-cover w-full h-auto shadow-large"
-                        data-ai-hint="fabric detail"
+                        className="object-cover w-full h-auto shadow-large rounded-lg"
+                        data-ai-hint={storyImage.imageHint}
                     />
                 )}
               </div>
