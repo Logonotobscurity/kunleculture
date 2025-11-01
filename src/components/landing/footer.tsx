@@ -35,7 +35,7 @@ export function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4 flex flex-col">
             <Link href="#" className="mb-4">
-              <KunleLogo className="h-8 w-auto text-white" />
+              <KunleLogo className="h-6 w-auto text-white" />
             </Link>
             <p className="text-sm text-white/70 mb-6 max-w-sm">
                 Kunle Couture is a contemporary luxury menswear brand that fuses the artistry of traditional African tailoring with modern design sensibilities.
