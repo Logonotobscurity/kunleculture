@@ -1,9 +1,7 @@
-
 'use client';
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16" {...props}>
@@ -16,11 +14,11 @@ export function WhatsAppWidget() {
     return (
         <Button
             asChild
-            className="fixed bottom-6 right-6 h-16 w-16 rounded-full bg-emerald-600 hover:bg-emerald-700 shadow-large z-50"
+            className="fixed bottom-6 right-6 h-20 w-20 rounded-full bg-emerald-600 hover:bg-emerald-700 shadow-large z-50"
             aria-label="Chat on WhatsApp"
         >
             <Link href="https://wa.me/2348123456789" target="_blank" rel="noopener noreferrer">
-                <WhatsAppIcon className="h-8 w-8 text-white" />
+                <WhatsAppIcon className="h-10 w-10 text-white" />
             </Link>
         </Button>
     );
