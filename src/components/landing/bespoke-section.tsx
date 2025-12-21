@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { PencilLine, Ruler, Scissors, Shirt } from "lucide-react";
+import Link from "next/link";
 
 const processSteps = [
   {
@@ -60,11 +61,11 @@ export function BespokeSection() {
                     ))}
                 </div>
                  <div className="mt-12 flex flex-col sm:flex-row gap-4">
-                    <Button size="lg" className="rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large px-10">
-                        Book Appointment
+                    <Button size="lg" className="rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large px-10" asChild>
+                        <Link href="/bespoke">Book Appointment</Link>
                     </Button>
-                    <Button size="lg" variant="outline" className="rounded-full border-yellow-900 text-yellow-900 hover:bg-yellow-900/10 px-10">
-                        How It Works
+                    <Button size="lg" variant="outline" className="rounded-full border-yellow-900 text-yellow-900 hover:bg-yellow-900/10 px-10" asChild>
+                        <Link href="/bespoke">How It Works</Link>
                     </Button>
                 </div>
             </div>
