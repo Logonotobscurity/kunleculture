@@ -59,6 +59,10 @@
     --radius-2xl: 48px;
     --radius-full: 9999px;
   }
+
+  html {
+    @apply scroll-smooth;
+  }
 }
 
 @layer base {
