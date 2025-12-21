@@ -3,6 +3,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Eye } from "lucide-react";
+import Link from "next/link";
 
 const collections = [
   {
@@ -111,7 +112,9 @@ export function CollectionSection() {
           ))}
         </div>
         <div className="mt-12 text-center">
-            <Button size="lg" className="rounded-full shadow-large">Explore More</Button>
+            <Button size="lg" className="rounded-full shadow-large px-8 md:px-12" asChild>
+              <Link href="/shop">Explore More</Link>
+            </Button>
         </div>
       </div>
     </section>

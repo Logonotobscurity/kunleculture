@@ -13,10 +13,10 @@ export function HeroSection() {
                     <AnimatedText />
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Button size="lg" className="bg-yellow-900 text-white hover:bg-yellow-700 rounded-full shadow-large px-16 py-2.5 md:py-3.5 text-base md:text-xl font-semibold" asChild>
+                <Button size="lg" className="bg-yellow-900 text-white hover:bg-yellow-700 rounded-full shadow-large px-8 sm:px-12 md:px-16 py-2.5 md:py-3.5 text-base md:text-xl font-semibold" asChild>
                     <Link href="/shop">Explore Collection</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="rounded-full border-yellow-900 text-yellow-900 hover:bg-yellow-900/10 shadow-large px-16 py-2.5 md:py-3.5 text-base md:text-xl font-semibold" asChild>
+                <Button size="lg" variant="outline" className="rounded-full border-yellow-900 text-yellow-900 hover:bg-yellow-900/10 shadow-large px-8 sm:px-12 md:px-16 py-2.5 md:py-3.5 text-base md:text-xl font-semibold" asChild>
                     <Link href="/bespoke">Book Bespoke</Link>
                 </Button>
                 </div>
