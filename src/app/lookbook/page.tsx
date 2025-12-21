@@ -1,4 +1,3 @@
-
 'use client';
 import { useState } from "react";
 import { Navbar } from "@/components/landing/navbar";
@@ -44,13 +43,13 @@ export default function LookbookPage() {
   }
 
   return (
-    <div className="flex flex-col min-h-dvh bg-background text-foreground">
+    <div className="flex flex-col min-h-dvh">
       <Navbar />
       <main className="flex-1 pt-20">
         <section className="w-full py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto">
-              <h1 className="text-h1-mobile md:text-h1-desktop font-sans font-semibold text-foreground">
+              <h1 className="text-h1-mobile md:text-h1-desktop font-sans font-semibold">
                 The Lookbook
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
@@ -60,9 +59,9 @@ export default function LookbookPage() {
             
             <div className="flex justify-center my-12">
                 <Tabs value={activeTab} onValueChange={setActiveTab}>
-                    <TabsList>
+                    <TabsList className="bg-stone-100/50">
                         {categories.map(category => (
-                            <TabsTrigger key={category} value={category}>{category}</TabsTrigger>
+                            <TabsTrigger key={category} value={category} className="data-[state=active]:bg-yellow-900/10 data-[state=active]:text-yellow-900">{category}</TabsTrigger>
                         ))}
                     </TabsList>
                 </Tabs>

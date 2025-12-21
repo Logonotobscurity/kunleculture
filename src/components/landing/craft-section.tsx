@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
@@ -28,10 +27,10 @@ const craftCards = [
 
 export function CraftSection() {
   return (
-    <section className="w-full py-16 md:py-24 bg-background">
+    <section className="w-full py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
+          <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
             The Craft of Kunle Couture
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -41,7 +40,7 @@ export function CraftSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
           {craftCards.map((card) => (
-            <Card key={card.title} className="flex flex-col group overflow-hidden shadow-subtle hover:shadow-large transition-all duration-300 rounded-none border-stone-300">
+            <Card key={card.title} className="flex flex-col group overflow-hidden shadow-subtle hover:shadow-large transition-all duration-300 rounded-none border-yellow-900/20 bg-stone-100/50">
               {card.image && (
                 <div className="overflow-hidden">
                     <Image
@@ -55,7 +54,7 @@ export function CraftSection() {
                 </div>
               )}
               <CardHeader className="p-5">
-                <CardTitle className="text-xl font-semibold text-foreground">{card.title}</CardTitle>
+                <CardTitle className="text-xl font-semibold">{card.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow p-5 pt-0">
                 <p className="text-muted-foreground">{card.description}</p>

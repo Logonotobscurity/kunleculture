@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/landing/navbar";
 import { Footer } from "@/components/landing/footer";
 import Image from "next/image";
@@ -31,7 +30,7 @@ export default function BespokePage() {
   const bespokeHeroImage = PlaceHolderImages.find((p) => p.id === "category-bespoke");
   
   return (
-    <div className="flex flex-col min-h-dvh bg-background text-foreground">
+    <div className="flex flex-col min-h-dvh">
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
@@ -55,7 +54,7 @@ export default function BespokePage() {
                 <p className="mt-4 text-lg md:text-xl text-white max-w-3xl">
                     Experience the pinnacle of personalization with a Kunle Couture bespoke garment, crafted exclusively for your body, style, and story.
                 </p>
-                 <Button size="lg" className="mt-8 rounded-full bg-white text-black hover:bg-stone-200 shadow-large px-10">
+                 <Button size="lg" className="mt-8 rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large px-10">
                     Book a Consultation
                 </Button>
             </div>
@@ -68,7 +67,7 @@ export default function BespokePage() {
         <section className="w-full py-16 md:py-24">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-3xl mx-auto">
-                    <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
+                    <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
                         Why Choose Bespoke?
                     </h2>
                     <p className="mt-4 text-lg text-muted-foreground">
@@ -76,17 +75,17 @@ export default function BespokePage() {
                     </p>
                 </div>
                 <div className="mt-12 grid md:grid-cols-3 gap-8">
-                    <div className="text-center p-6 border rounded-lg shadow-subtle">
+                    <div className="text-center p-6 border rounded-lg shadow-subtle border-yellow-900/20 bg-stone-100/50">
                         <Ruler className="w-12 h-12 mx-auto text-primary mb-4"/>
                         <h3 className="text-xl font-bold mb-2">Perfect Fit</h3>
                         <p className="text-muted-foreground">Crafted to your exact measurements, a bespoke garment moves with you and fits like a second skin.</p>
                     </div>
-                    <div className="text-center p-6 border rounded-lg shadow-subtle">
+                    <div className="text-center p-6 border rounded-lg shadow-subtle border-yellow-900/20 bg-stone-100/50">
                         <Shirt className="w-12 h-12 mx-auto text-primary mb-4"/>
                         <h3 className="text-xl font-bold mb-2">Exclusive Design</h3>
                         <p className="text-muted-foreground">From lapel style to button choice, every detail is chosen by you, creating a truly one-of-a-kind piece.</p>
                     </div>
-                    <div className="text-center p-6 border rounded-lg shadow-subtle">
+                    <div className="text-center p-6 border rounded-lg shadow-subtle border-yellow-900/20 bg-stone-100/50">
                         <Check className="w-12 h-12 mx-auto text-primary mb-4"/>
                         <h3 className="text-xl font-bold mb-2">Lasting Quality</h3>
                         <p className="text-muted-foreground">Using the finest materials and construction techniques, your garment is built to last a lifetime.</p>
@@ -96,17 +95,17 @@ export default function BespokePage() {
         </section>
         
         {/* FAQ Section */}
-        <section className="w-full py-16 md:py-24 bg-muted">
+        <section className="w-full py-16 md:py-24 bg-stone-100/50">
             <div className="container mx-auto px-4 md:px-6 max-w-4xl">
                  <div className="text-center max-w-3xl mx-auto mb-12">
-                    <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
+                    <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
                         Frequently Asked Questions
                     </h2>
                 </div>
                 <Accordion type="single" collapsible className="w-full">
                     {faqs.map((faq, index) => (
-                        <AccordionItem key={index} value={`item-${index}`}>
-                        <AccordionTrigger className="text-left text-xl font-semibold hover:no-underline text-foreground">
+                        <AccordionItem key={index} value={`item-${index}`} className="border-yellow-900/20">
+                        <AccordionTrigger className="text-left text-xl font-semibold hover:no-underline">
                             {faq.question}
                         </AccordionTrigger>
                         <AccordionContent className="text-base md:text-lg text-muted-foreground pt-2 pr-8">

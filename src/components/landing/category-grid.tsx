@@ -49,12 +49,12 @@ const secondaryCategories = [
 
 export function CategoryGrid() {
   return (
-    <section className="w-full py-16 md:py-24 bg-background">
+    <section className="w-full py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {primaryCategories.slice(0, 2).map((cat) => (
             <div key={cat.title} className={cn("group relative overflow-hidden h-96 md:h-auto", cat.colSpan, cat.rowSpan)}>
-                <Card className="h-full w-full shadow-large transition-transform duration-300 group-hover:scale-105 rounded-none">
+                <Card className="h-full w-full shadow-large transition-transform duration-300 group-hover:scale-105 rounded-none bg-stone-100">
                     {cat.image && (
                         <Image
                         src={cat.image.imageUrl}
@@ -77,7 +77,7 @@ export function CategoryGrid() {
           <div className="flex flex-col gap-6 h-96 md:h-auto">
              {primaryCategories.slice(2, 4).map((cat) => (
                 <div key={cat.title} className="group relative overflow-hidden flex-1">
-                    <Card className="h-full w-full shadow-large transition-transform duration-300 group-hover:scale-105 rounded-none">
+                    <Card className="h-full w-full shadow-large transition-transform duration-300 group-hover:scale-105 rounded-none bg-stone-100">
                         {cat.image && (
                             <Image
                             src={cat.image.imageUrl}
@@ -99,7 +99,7 @@ export function CategoryGrid() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             {secondaryCategories.map((cat) => (
                  <div key={cat.title} className="group relative overflow-hidden h-56">
-                    <Card className="h-full w-full shadow-large transition-transform duration-300 group-hover:scale-105 rounded-none">
+                    <Card className="h-full w-full shadow-large transition-transform duration-300 group-hover:scale-105 rounded-none bg-stone-100">
                         {cat.image && (
                             <Image
                             src={cat.image.imageUrl}

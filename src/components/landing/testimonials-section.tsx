@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -44,15 +43,15 @@ const testimonials = [
 
 export function TestimonialsSection() {
     return (
-        <section className="w-full py-16 md:py-24 bg-editorial-section overflow-hidden">
+        <section className="w-full py-16 md:py-24 overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
                     <div className="max-w-xl">
-                        <h2 className="text-h3-mobile md:text-h3-desktop font-bold font-sans text-foreground">
+                        <h2 className="text-h3-mobile md:text-h3-desktop font-bold font-sans">
                             This experience actually changes lives. Don’t just take it from us.
                         </h2>
                     </div>
-                    <Button size="lg" variant="outline" className="rounded-full shrink-0">
+                    <Button size="lg" variant="outline" className="rounded-full shrink-0 border-yellow-900 text-yellow-900 hover:bg-yellow-900/10">
                         See more reviews
                     </Button>
                 </div>
@@ -92,7 +91,7 @@ export function TestimonialsSection() {
                                         )}
                                     </div>
                                     <div>
-                                        <blockquote className="text-lg md:text-xl font-medium text-foreground mb-4">
+                                        <blockquote className="text-lg md:text-xl font-medium mb-4">
                                             “{testimonial.quote}”
                                         </blockquote>
                                         {testimonial.name && (

@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/landing/navbar";
 import { Footer } from "@/components/landing/footer";
 import Image from "next/image";
@@ -19,11 +18,11 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="flex flex-col min-h-dvh bg-background text-foreground">
+    <div className="flex flex-col min-h-dvh">
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-center text-center text-white overflow-hidden">
+        <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-center text-center overflow-hidden">
             {aboutHeroImage && (
                 <Image
                 src={aboutHeroImage.imageUrl}
@@ -34,12 +33,12 @@ export default function AboutPage() {
                 data-ai-hint={aboutHeroImage.imageHint}
                 />
             )}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_0px_0px,rgba(0,0,0,0.15),rgba(0,0,0,0))]" />
+            <div className="absolute inset-0 bg-black/40" />
             <div className="relative z-10 flex flex-col items-center p-4">
                 <h1 className="text-h1-mobile md:text-h1-desktop font-sans font-semibold text-amber-300 drop-shadow-lg">
                     Woven with Purpose
                 </h1>
-                <p className="mt-4 text-lg md:text-xl text-white/80 max-w-3xl">
+                <p className="mt-4 text-lg md:text-xl text-white/90 max-w-3xl">
                     Discover the philosophy, artistry, and heritage that define every stitch of Kunle Couture.
                 </p>
             </div>
@@ -51,7 +50,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <span className="block h-0.5 w-20 bg-accent"></span>
-                <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
+                <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
                   Our Story
                 </h2>
                 <p className="text-lg text-muted-foreground">
@@ -60,7 +59,7 @@ export default function AboutPage() {
                 <p className="text-muted-foreground">
                   Each garment tells a story—of intricate craftsmanship passed down through generations, of vibrant cultures, and of the modern man who wears his identity with pride. We are more than a brand; we are a movement dedicated to style, substance, and soul.
                 </p>
-                <Button size="lg" variant="outline" className="rounded-full">
+                <Button size="lg" variant="outline" className="rounded-full border-yellow-900 text-yellow-900 hover:bg-yellow-900/10">
                   Meet the Founder
                 </Button>
               </div>
@@ -81,10 +80,10 @@ export default function AboutPage() {
         </section>
         
         {/* Mission & Values Section */}
-        <section className="w-full py-16 md:py-24 bg-muted">
+        <section className="w-full py-16 md:py-24 bg-stone-100/50">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-3xl mx-auto">
-                    <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
+                    <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
                         Our Mission
                     </h2>
                     <p className="mt-4 text-lg text-muted-foreground">
@@ -97,7 +96,7 @@ export default function AboutPage() {
                             <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground mb-4">
                                 <Check className="w-6 h-6" />
                             </div>
-                            <h3 className="font-semibold text-lg text-foreground">{value}</h3>
+                            <h3 className="font-semibold text-lg">{value}</h3>
                         </div>
                     ))}
                 </div>

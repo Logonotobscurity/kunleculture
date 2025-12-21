@@ -5,23 +5,23 @@
 @layer base {
   :root {
     --background: 240 10% 98%; /* stone-100 */
-    --foreground: 240 10% 3.9%;
+    --foreground: 36 73% 25%; /* yellow-900 */
 
     --card: 240 10% 98%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 36 73% 25%;
 
     --popover: 240 10% 98%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 36 73% 25%;
     
     /* Kunle Couture Palette */
-    --primary: 180 65% 15%; /* teal-950 */
+    --primary: 36 73% 25%; /* yellow-900 */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 180 65% 20%; /* teal-900 */
     --secondary-foreground: 0 0% 100%;
 
     --muted: 220 14% 96%; /* stone-100 */
-    --muted-foreground: 215 16% 47%; /* slate-500 */
+    --muted-foreground: 36 73% 25% / 0.8; /* yellow-900/80 */
 
     --accent: 336 70% 30%; /* pink-900 */
     --accent-foreground: 0 0% 100%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 180 65% 15%;
+    --ring: 36 73% 25%;
     
     --radius: 0.5rem;
 
@@ -66,6 +66,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-tailoring-process bg-background-texture text-foreground;
   }
 }

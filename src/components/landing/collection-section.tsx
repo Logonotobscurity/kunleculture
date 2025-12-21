@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
@@ -70,10 +69,10 @@ const collections = [
 
 export function CollectionSection() {
   return (
-    <section className="w-full py-16 md:py-24 bg-muted">
+    <section className="w-full py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold text-foreground">
+          <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
             Full Collection
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -83,7 +82,7 @@ export function CollectionSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {collections.map((item) => (
-            <Card key={item.title} className="group overflow-hidden border-none shadow-subtle hover:shadow-large transition-shadow duration-300 rounded-none">
+            <Card key={item.title} className="group overflow-hidden border-none shadow-subtle hover:shadow-large transition-shadow duration-300 rounded-none bg-stone-100/50">
               <div className="relative">
                 {item.image && (
                   <Image
@@ -104,8 +103,8 @@ export function CollectionSection() {
                     </Button>
                 </div>
               </div>
-              <CardContent className="p-4 bg-background">
-                <h3 className="font-semibold text-lg text-foreground">{item.title}</h3>
+              <CardContent className="p-4 bg-stone-100/50">
+                <h3 className="font-semibold text-lg">{item.title}</h3>
                 <p className="text-muted-foreground mt-1 font-medium">Request for Quote</p>
               </CardContent>
             </Card>
