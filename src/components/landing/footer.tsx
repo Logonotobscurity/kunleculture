@@ -31,7 +31,7 @@ const sections = {
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-transparent text-yellow-900 border-t border-yellow-900/10">
+    <footer className="bg-tailoring-process bg-background-texture text-yellow-900 border-t border-yellow-900/10">
       <div className="container mx-auto px-4 md:px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4 flex flex-col">
