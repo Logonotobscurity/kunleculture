@@ -1,3 +1,4 @@
+
 'use client';
 import { useState } from "react";
 import { Navbar } from "@/components/landing/navbar";
@@ -65,17 +66,7 @@ export default function LookbookPage() {
               </p>
             </div>
             
-            <div className="flex justify-center my-12">
-                <Tabs value={activeTab} onValueChange={setActiveTab}>
-                    <TabsList className="bg-stone-100/50">
-                        {categories.map(category => (
-                            <TabsTrigger key={category} value={category} className="data-[state=active]:bg-yellow-900/10 data-[state=active]:text-yellow-900">{category}</TabsTrigger>
-                        ))}
-                    </TabsList>
-                </Tabs>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[250px]">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[250px] mt-12">
                 {looksByCategory[activeTab].map((look, index) => (
                     <MasonryImage key={look.id} look={look} index={index} />
                 ))}
