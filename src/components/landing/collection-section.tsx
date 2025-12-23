@@ -141,7 +141,9 @@ export function CollectionSection() {
               </div>
               <CardContent className="p-4 bg-stone-100/50 flex flex-col items-start">
                 <h3 className="font-semibold text-lg">{item.title}</h3>
-                <Button variant="link" className="p-0 h-auto text-muted-foreground mt-1 font-medium hover:no-underline">Request for Quote</Button>
+                <Button variant="link" className="p-0 h-auto text-muted-foreground mt-1 font-medium hover:no-underline rounded-full" asChild>
+                    <Link href={`/quote?product=${encodeURIComponent(item.title)}`}>Request for Quote</Link>
+                </Button>
               </CardContent>
             </Card>
           ))}

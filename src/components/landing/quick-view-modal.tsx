@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Image from 'next/image';
 import type { ImagePlaceholder } from "@/lib/placeholder-images";
 import { Facebook, Twitter, Mail } from "lucide-react";
+import Link from "next/link";
 
 interface QuickViewModalProps {
     isOpen: boolean;
@@ -68,7 +69,9 @@ export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = f
                             </DialogHeader>
                             <div className="space-y-4">
                                 <p className="text-muted-foreground">This is a placeholder description for the {product.title}. A full, engaging description would go here, detailing the fabric, fit, and unique features of this exquisite garment.</p>
-                                <Button size="lg" variant="outline" className="w-full">Request for Quote</Button>
+                                <Button size="lg" variant="outline" className="w-full rounded-full" asChild>
+                                    <Link href={`/quote?product=${encodeURIComponent(product.title)}`}>Request for Quote</Link>
+                                </Button>
                             </div>
                         </div>
                     </div>
