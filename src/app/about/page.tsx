@@ -6,9 +6,11 @@ import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
-import { NewsletterSection } from "@/components/landing/newsletter-section";
 import type { Metadata } from "next";
 import { ParticleTextEffect } from "@/components/ui/particle-text-effect";
+import dynamic from "next/dynamic";
+
+const NewsletterSection = dynamic(() => import('@/components/landing/newsletter-section').then(m => m.NewsletterSection));
 
 // export const metadata: Metadata = {
 //   title: "Our Story",

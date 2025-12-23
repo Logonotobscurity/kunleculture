@@ -1,13 +1,17 @@
+
 import { Navbar } from "@/components/landing/navbar";
 import { HeroSection } from "@/components/landing/hero-section";
-import { CategoryGrid } from "@/components/landing/category-grid";
-import { CollectionSection } from "@/components/landing/collection-section";
-import { BespokeSection } from "@/components/landing/bespoke-section";
-import { TestimonialsSection } from "@/components/landing/testimonials-section";
-import { CraftSection } from "@/components/landing/craft-section";
-import { FaqSection } from "@/components/landing/faq-section";
-import { NewsletterSection } from "@/components/landing/newsletter-section";
 import { Footer } from "@/components/landing/footer";
+import dynamic from "next/dynamic";
+
+const CategoryGrid = dynamic(() => import('@/components/landing/category-grid').then(m => m.CategoryGrid));
+const CollectionSection = dynamic(() => import('@/components/landing/collection-section').then(m => m.CollectionSection));
+const BespokeSection = dynamic(() => import('@/components/landing/bespoke-section').then(m => m.BespokeSection));
+const TestimonialsSection = dynamic(() => import('@/components/landing/testimonials-section').then(m => m.TestimonialsSection));
+const CraftSection = dynamic(() => import('@/components/landing/craft-section').then(m => m.CraftSection));
+const FaqSection = dynamic(() => import('@/components/landing/faq-section').then(m => m.FaqSection));
+const NewsletterSection = dynamic(() => import('@/components/landing/newsletter-section').then(m => m.NewsletterSection));
+
 
 export default function Home() {
   return (
