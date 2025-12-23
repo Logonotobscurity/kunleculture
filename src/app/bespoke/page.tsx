@@ -1,3 +1,5 @@
+
+'use client';
 import { Navbar } from "@/components/landing/navbar";
 import { Footer } from "@/components/landing/footer";
 import Image from "next/image";
@@ -7,13 +9,15 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Check, PencilLine, Ruler, Scissors, Shirt } from "lucide-react";
 import { BespokeSection } from "@/components/landing/bespoke-section";
 import Link from "next/link";
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import { ParticleTextEffect } from "@/components/ui/particle-text-effect";
 
-export const metadata: Metadata = {
-  title: "Bespoke Services",
-  description: "Experience the pinnacle of personalization with a Kunle Couture bespoke garment. Discover our process from consultation to the final fitting, crafted exclusively for you.",
-};
+// export const metadata: Metadata = {
+//   title: "Bespoke Services",
+//   description: "Experience the pinnacle of personalization with a Kunle Couture bespoke garment. Discover our process from consultation to the final fitting, crafted exclusively for you.",
+// };
 
+const bespokeWords = ["The Art of You", "Bespoke", "Made to Measure", "Consultation"];
 
 const faqs = [
     {
@@ -35,33 +39,17 @@ const faqs = [
   ];
 
 export default function BespokePage() {
-  const bespokeHeroImage = PlaceHolderImages.find((p) => p.id === "category-bespoke");
   
   return (
-    <div className="flex flex-col min-h-dvh">
+    <div className="flex flex-col min-h-dvh bg-black">
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-center text-center text-white overflow-hidden">
-            {bespokeHeroImage && (
-                <Image
-                src={bespokeHeroImage.imageUrl}
-                alt={bespokeHeroImage.description}
-                fill
-                className="object-cover"
-                priority
-                data-ai-hint={bespokeHeroImage.imageHint}
-                />
-            )}
             <div className="absolute inset-0 bg-background-texture opacity-30"></div>
             <div className="absolute inset-0 bg-black/50" />
             <div className="relative z-10 flex flex-col items-center p-4">
-                <h1 className="text-h1-mobile md:text-h1-desktop font-sans font-semibold text-amber-300 drop-shadow-lg">
-                    The Art of You
-                </h1>
-                <p className="mt-4 text-lg md:text-xl text-white max-w-3xl">
-                    Experience the pinnacle of personalization with a Kunle Couture bespoke garment, crafted exclusively for your body, style, and story.
-                </p>
+                <ParticleTextEffect words={bespokeWords} />
                  <Button size="lg" className="mt-8 rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large px-10" asChild>
                     <Link href="/quote?product=Bespoke%20Consultation">Book a Consultation</Link>
                 </Button>
@@ -72,7 +60,7 @@ export default function BespokePage() {
         <BespokeSection />
         
         {/* Why Bespoke Section */}
-        <section className="w-full py-16 md:py-24">
+        <section className="w-full py-16 md:py-24 bg-stone-100">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-3xl mx-auto">
                     <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
