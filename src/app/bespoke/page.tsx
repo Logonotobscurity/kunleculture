@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Check, PencilLine, Ruler, Scissors, Shirt } from "lucide-react";
 import { BespokeSection } from "@/components/landing/bespoke-section";
+import Link from "next/link";
 
 const faqs = [
     {
@@ -54,8 +55,8 @@ export default function BespokePage() {
                 <p className="mt-4 text-lg md:text-xl text-white max-w-3xl">
                     Experience the pinnacle of personalization with a Kunle Couture bespoke garment, crafted exclusively for your body, style, and story.
                 </p>
-                 <Button size="lg" className="mt-8 rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large px-10">
-                    Book a Consultation
+                 <Button size="lg" className="mt-8 rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large px-10" asChild>
+                    <Link href="/quote?product=Bespoke%20Consultation">Book a Consultation</Link>
                 </Button>
             </div>
         </section>

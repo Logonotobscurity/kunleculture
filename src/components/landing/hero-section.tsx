@@ -17,7 +17,7 @@ export function HeroSection() {
                     <Link href="/shop">Explore Collection</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="rounded-full border-yellow-900 text-yellow-900 hover:bg-yellow-900/10 shadow-large px-8 sm:px-12 md:px-16 py-2.5 md:py-3.5 text-base md:text-xl font-semibold" asChild>
-                    <Link href="/bespoke">Book Bespoke</Link>
+                    <Link href="/quote?product=Bespoke%20Service">Book Bespoke</Link>
                 </Button>
                 </div>
             </div>

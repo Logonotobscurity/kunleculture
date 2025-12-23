@@ -62,7 +62,7 @@ export function BespokeSection() {
                 </div>
                  <div className="mt-12 flex flex-col sm:flex-row gap-4">
                     <Button size="lg" className="rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large px-8 md:px-10" asChild>
-                        <Link href="/bespoke">Book Appointment</Link>
+                        <Link href="/quote?product=Bespoke%20Appointment">Book Appointment</Link>
                     </Button>
                     <Button size="lg" variant="outline" className="rounded-full border-yellow-900 text-yellow-900 hover:bg-yellow-900/10 px-8 md:px-10" asChild>
                         <Link href="/bespoke">How It Works</Link>
