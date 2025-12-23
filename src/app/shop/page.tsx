@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 const Filters = () => (
     <div className="space-y-6">
-        <Accordion type="multiple" defaultValue={["category", "size", "price"]} className="w-full">
+        <Accordion type="multiple" defaultValue={["category", "size"]} className="w-full">
             <AccordionItem value="category" className="border-yellow-900/20">
                 <AccordionTrigger className="text-lg font-semibold">Category</AccordionTrigger>
                 <AccordionContent className="pt-2">
@@ -57,16 +57,6 @@ const Filters = () => (
                             <button key={color} className="w-8 h-8 rounded-full border border-yellow-900/20" style={{ backgroundColor: color }} />
                         ))}
                     </div>
-                </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="price" className="border-yellow-900/20">
-                <AccordionTrigger className="text-lg font-semibold">Price</AccordionTrigger>
-                <AccordionContent className="pt-4">
-                     <Slider defaultValue={[500, 2500]} max={5000} step={100} />
-                     <div className="flex justify-between text-sm text-muted-foreground mt-2">
-                         <span>$500</span>
-                         <span>$2500</span>
-                     </div>
                 </AccordionContent>
             </AccordionItem>
         </Accordion>
