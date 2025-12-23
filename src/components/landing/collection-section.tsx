@@ -1,11 +1,20 @@
-import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Eye } from "lucide-react";
-import Link from "next/link";
+'use client';
 
-const collections = [
+import Image from 'next/image';
+import { PlaceHolderImages, type ImagePlaceholder } from '@/lib/placeholder-images';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Heart, Eye, Share2 } from 'lucide-react';
+import Link from 'next/link';
+import { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
+import { QuickViewModal } from './quick-view-modal';
+
+const collections: {
+  title: string;
+  price: string;
+  image: ImagePlaceholder | undefined;
+}[] = [
   {
     title: "The Monarch Agbada",
     price: "1,250",
@@ -69,7 +78,30 @@ const collections = [
 ];
 
 export function CollectionSection() {
+    const { toast } = useToast();
+    const [selectedProduct, setSelectedProduct] = useState<typeof collections[0] | null>(null);
+    const [isQuickViewOpen, setQuickViewOpen] = useState(false);
+    const [isShareModalOpen, setShareModalOpen] = useState(false);
+
+    const handleWishlistClick = (itemTitle: string) => {
+        toast({
+            title: "Added to Wishlist",
+            description: `${itemTitle} has been added to your wishlist.`,
+        });
+    };
+
+    const handleQuickViewClick = (product: typeof collections[0]) => {
+        setSelectedProduct(product);
+        setQuickViewOpen(true);
+    }
+    
+    const handleShareClick = (product: typeof collections[0]) => {
+        setSelectedProduct(product);
+        setShareModalOpen(true);
+    }
+
   return (
+    <>
     <section className="w-full py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -96,17 +128,20 @@ export function CollectionSection() {
                   />
                 )}
                 <div className="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Button size="icon" variant="secondary" className="rounded-full shadow-lg h-10 w-10 bg-background/80 hover:bg-background">
+                    <Button size="icon" variant="secondary" className="rounded-full shadow-lg h-10 w-10 bg-background/80 hover:bg-background" onClick={() => handleWishlistClick(item.title)}>
                         <Heart className="w-5 h-5 text-muted-foreground" />
                     </Button>
-                    <Button size="icon" variant="secondary" className="rounded-full shadow-lg h-10 w-10 bg-background/80 hover:bg-background">
+                    <Button size="icon" variant="secondary" className="rounded-full shadow-lg h-10 w-10 bg-background/80 hover:bg-background" onClick={() => handleQuickViewClick(item)}>
                         <Eye className="w-5 h-5 text-muted-foreground" />
+                    </Button>
+                     <Button size="icon" variant="secondary" className="rounded-full shadow-lg h-10 w-10 bg-background/80 hover:bg-background" onClick={() => handleShareClick(item)}>
+                        <Share2 className="w-5 h-5 text-muted-foreground" />
                     </Button>
                 </div>
               </div>
-              <CardContent className="p-4 bg-stone-100/50">
+              <CardContent className="p-4 bg-stone-100/50 flex flex-col items-start">
                 <h3 className="font-semibold text-lg">{item.title}</h3>
-                <p className="text-muted-foreground mt-1 font-medium">Request for Quote</p>
+                <Button variant="link" className="p-0 h-auto text-muted-foreground mt-1 font-medium hover:no-underline">Request for Quote</Button>
               </CardContent>
             </Card>
           ))}
@@ -118,5 +153,22 @@ export function CollectionSection() {
         </div>
       </div>
     </section>
+
+    {selectedProduct && (
+        <>
+            <QuickViewModal 
+                isOpen={isQuickViewOpen} 
+                onOpenChange={setQuickViewOpen} 
+                product={selectedProduct}
+            />
+            <QuickViewModal 
+                isOpen={isShareModalOpen} 
+                onOpenChange={setShareModalOpen} 
+                product={selectedProduct}
+                isShareModal
+            />
+        </>
+    )}
+    </>
   );
 }
