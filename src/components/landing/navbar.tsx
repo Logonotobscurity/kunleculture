@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
@@ -19,6 +20,7 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export function Navbar() {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,17 +45,21 @@ export function Navbar() {
             <KunleLogo className="w-[180px] md:w-[200px] h-auto text-yellow-900" />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+          <nav className="hidden md:flex items-center gap-2">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-lg font-medium text-yellow-900 transition-colors hover:text-yellow-700 group"
+                className={cn(
+                    "px-4 py-2 rounded-full text-lg font-semibold text-yellow-900 transition-colors duration-300",
+                    isActive ? "bg-yellow-900/10" : "hover:bg-yellow-900/10"
+                )}
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-900 transition-all duration-300 group-hover:w-full"></span>
               </Link>
-            ))}
+            )})}
           </nav>
 
           <div className="flex items-center gap-4">
@@ -85,17 +91,22 @@ export function Navbar() {
                                 </Button>
                             </SheetClose>
                         </div>
-                        <nav className="flex flex-col items-center justify-center flex-1 gap-8 p-6">
-                            {navLinks.map((link) => (
-                            <SheetClose asChild key={link.href}>
-                                <Link
-                                    href={link.href}
-                                    className="text-2xl font-medium text-yellow-900 transition-colors hover:text-yellow-700"
-                                >
-                                    {link.label}
-                                </Link>
-                            </SheetClose>
-                            ))}
+                        <nav className="flex flex-col items-center justify-center flex-1 gap-4 p-6">
+                            {navLinks.map((link) => {
+                                const isActive = pathname === link.href;
+                                return (
+                                <SheetClose asChild key={link.href}>
+                                    <Link
+                                        href={link.href}
+                                        className={cn(
+                                            "w-full text-center text-2xl font-semibold text-yellow-900 transition-colors rounded-full py-3",
+                                            isActive ? "bg-yellow-900/10" : "hover:bg-yellow-900/10"
+                                        )}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </SheetClose>
+                            )})}
                         </nav>
                          <div className="p-6 mt-auto border-t border-yellow-900/20">
                             <Button asChild className="w-full h-12 rounded-full" size="lg" variant="default">
@@ -115,5 +126,3 @@ export function Navbar() {
     </header>
   );
 }
-
-    
