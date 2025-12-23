@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['gliroyFonts', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-gilroy)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'hero-mobile': ['25px', { lineHeight: '24.75px' }],
