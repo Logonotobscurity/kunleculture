@@ -5,9 +5,11 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import Image from 'next/image';
 import type { ImagePlaceholder } from "@/lib/placeholder-images";
-import { Facebook, Twitter, Mail } from "lucide-react";
+import { Facebook, Twitter, Mail, Copy } from "lucide-react";
 import Link from "next/link";
 import { Card, CardContent } from "../ui/card";
+import { InstagramIcon, TikTokIcon, WhatsAppIcon } from "../social-icons";
+import { useToast } from "@/hooks/use-toast";
 
 interface QuickViewModalProps {
     isOpen: boolean;
@@ -20,6 +22,7 @@ interface QuickViewModalProps {
 }
 
 export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = false }: QuickViewModalProps) {
+    const { toast } = useToast();
 
     const getShareUrl = () => {
         if (typeof window === 'undefined') return '';
@@ -30,9 +33,25 @@ export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = f
     const shareUrl = getShareUrl();
     const shareText = `Check out this amazing product from Kunle Couture: ${product.title}`;
 
+    const handleCopyToClipboard = () => {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+            toast({
+                title: "Link Copied!",
+                description: "You can now paste the link on Instagram or TikTok.",
+            });
+        }, (err) => {
+            toast({
+                variant: "destructive",
+                title: "Failed to copy",
+                description: "Could not copy link to clipboard.",
+            });
+            console.error('Could not copy text: ', err);
+        });
+    };
+
     return (
         <Dialog open={isOpen} onOpenChange={onOpenChange}>
-            <DialogContent className="sm:max-w-[825px] bg-stone-100 p-0 rounded-lg">
+            <DialogContent className="sm:max-w-md md:max-w-[825px] w-[95%] bg-stone-100 p-0 rounded-lg">
                 {isShareModal ? (
                     <div className="p-6 md:p-8">
                         <DialogHeader>
@@ -41,7 +60,7 @@ export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = f
                         </DialogHeader>
                         <Card className="overflow-hidden mb-6">
                             <CardContent className="p-0">
-                                <div className="relative aspect-square w-full mx-auto max-w-sm">
+                                <div className="relative aspect-square w-full mx-auto max-w-[250px] sm:max-w-sm">
                                     {product.image && (
                                         <Image
                                             src={product.image.imageUrl}
@@ -55,6 +74,17 @@ export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = f
                             </CardContent>
                         </Card>
                         <div className="flex flex-wrap justify-center gap-2">
+                             <Button variant="outline" size="lg" asChild>
+                                <a href={`https://wa.me/?text=${encodeURIComponent(shareText + ' ' + shareUrl)}`} target="_blank" rel="noopener noreferrer">
+                                    <WhatsAppIcon className="mr-2 h-5 w-5" /> WhatsApp
+                                </a>
+                            </Button>
+                            <Button variant="outline" size="lg" onClick={handleCopyToClipboard}>
+                                <InstagramIcon className="mr-2 h-5 w-5" /> Instagram
+                            </Button>
+                            <Button variant="outline" size="lg" onClick={handleCopyToClipboard}>
+                                <TikTokIcon className="mr-2 h-5 w-5" /> TikTok
+                            </Button>
                             <Button variant="outline" size="lg" asChild>
                                 <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`} target="_blank" rel="noopener noreferrer">
                                     <Facebook className="mr-2 h-5 w-5" /> Facebook
@@ -69,6 +99,9 @@ export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = f
                                 <a href={`mailto:?subject=${encodeURIComponent(shareText)}&body=${encodeURIComponent(shareUrl)}`}>
                                     <Mail className="mr-2 h-5 w-5" /> Email
                                 </a>
+                            </Button>
+                             <Button variant="outline" size="lg" onClick={handleCopyToClipboard}>
+                                <Copy className="mr-2 h-5 w-5" /> Copy Link
                             </Button>
                         </div>
                     </div>
