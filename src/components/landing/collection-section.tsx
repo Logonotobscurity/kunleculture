@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -9,73 +10,64 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { QuickViewModal } from './quick-view-modal';
+import dynamic from 'next/dynamic';
 
 const collections: {
   title: string;
-  price: string;
   image: ImagePlaceholder | undefined;
 }[] = [
   {
     title: "The Monarch Agbada",
-    price: "1,250",
     image: PlaceHolderImages.find((p) => p.id === "collection-1"),
   },
   {
     title: "Lagosian Tunic Set",
-    price: "480",
     image: PlaceHolderImages.find((p) => p.id === "collection-2"),
   },
   {
     title: "The Chairman's Suit",
-    price: "1,800",
     image: PlaceHolderImages.find((p) => p.id === "collection-3"),
   },
   {
     title: "Sokoto Casuals",
-    price: "350",
     image: PlaceHolderImages.find((p) => p.id === "collection-4"),
   },
   {
     title: "Urban Regal Attire",
-    price: "850",
     image: PlaceHolderImages.find((p) => p.id === "editorial-1"),
   },
   {
     title: "The Advocate Ensemble",
-    price: "950",
     image: PlaceHolderImages.find((p) => p.id === "editorial-4"),
   },
   {
     title: "Noble Edit Jacket",
-    price: "1,100",
     image: PlaceHolderImages.find((p) => p.id === "craft-fabric"),
   },
   {
     title: "Roots and Royalty",
-    price: "720",
     image: PlaceHolderImages.find((p) => p.id === "editorial-2"),
   },
   {
     title: "The Oba Line",
-    price: "Request for Quote",
     image: PlaceHolderImages.find((p) => p.id === "hero-background")
   },
   {
     title: "Legacy Line",
-    price: "Request for Quote",
     image: PlaceHolderImages.find((p) => p.id === "category-bespoke")
   },
   {
     title: "Vanguard Line",
-    price: "Request for Quote",
     image: PlaceHolderImages.find((p) => p.id === "category-collections")
   },
   {
     title: "The Renaissance Drop",
-    price: "Request for Quote",
     image: PlaceHolderImages.find((p) => p.id === "category-tailoring")
   }
 ];
+
+const DynamicQuickViewModal = dynamic(() => import('./quick-view-modal').then(m => m.QuickViewModal), { ssr: false });
+
 
 export function CollectionSection() {
     const { toast } = useToast();
@@ -158,12 +150,12 @@ export function CollectionSection() {
 
     {selectedProduct && (
         <>
-            <QuickViewModal 
+            <DynamicQuickViewModal 
                 isOpen={isQuickViewOpen} 
                 onOpenChange={setQuickViewOpen} 
                 product={selectedProduct}
             />
-            <QuickViewModal 
+            <DynamicQuickViewModal 
                 isOpen={isShareModalOpen} 
                 onOpenChange={setShareModalOpen} 
                 product={selectedProduct}

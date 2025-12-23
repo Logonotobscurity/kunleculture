@@ -11,14 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import type { Metadata } from 'next';
 import { ParticleTextEffect } from '@/components/ui/particle-text-effect';
-
-// This metadata would ideally be in a server component wrapper if the page was server-rendered
-// export const metadata: Metadata = {
-//   title: "Request a Quote",
-//   description: "Request a personalized quote for a bespoke garment or consultation. Start a conversation with us on WhatsApp to begin your Kunle Couture experience.",
-// };
 
 const quoteWords = ["Request a Quote", "Get in Touch", "Bespoke Inquiry", "Start Creating"];
 
@@ -28,14 +21,22 @@ function QuoteForm() {
   const [name, setName] = useState('');
   const [message, setMessage] = useState(`I'm interested in a quote for: ${product}.`);
 
+  const getProductUrl = () => {
+    if (typeof window === 'undefined') return '';
+    return `${window.location.protocol}//${window.location.host}/quote?product=${encodeURIComponent(product)}`;
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const whatsappNumber = '2348123456789'; // Your WhatsApp number
+    const productUrl = getProductUrl();
     const fullMessage = `Hello Kunle Couture,
 
 My name is ${name}.
 
 ${message}
+
+Product URL: ${productUrl}
 
 Thank you!`;
 

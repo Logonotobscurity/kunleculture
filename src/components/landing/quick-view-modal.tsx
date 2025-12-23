@@ -14,7 +14,6 @@ interface QuickViewModalProps {
     onOpenChange: (isOpen: boolean) => void;
     product: {
         title: string;
-        price: string;
         image: ImagePlaceholder | undefined;
     };
     isShareModal?: boolean;
@@ -22,8 +21,14 @@ interface QuickViewModalProps {
 
 export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = false }: QuickViewModalProps) {
 
-    const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
-    const shareText = `Check out this amazing product: ${product.title}`;
+    const getShareUrl = () => {
+        if (typeof window === 'undefined') return '';
+        const baseUrl = `${window.location.protocol}//${window.location.host}`;
+        return `${baseUrl}/quote?product=${encodeURIComponent(product.title)}`;
+    }
+
+    const shareUrl = getShareUrl();
+    const shareText = `Check out this amazing product from Kunle Couture: ${product.title}`;
 
     return (
         <Dialog open={isOpen} onOpenChange={onOpenChange}>
@@ -49,7 +54,7 @@ export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = f
                                 </div>
                             </CardContent>
                         </Card>
-                        <div className="flex justify-center space-x-4">
+                        <div className="flex flex-wrap justify-center gap-2">
                             <Button variant="outline" size="lg" asChild>
                                 <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`} target="_blank" rel="noopener noreferrer">
                                     <Facebook className="mr-2 h-5 w-5" /> Facebook
@@ -75,7 +80,7 @@ export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = f
                                     src={product.image.imageUrl}
                                     alt={product.image.description}
                                     fill
-                                    className="object-cover rounded-l-lg"
+                                    className="object-cover rounded-t-lg md:rounded-l-lg md:rounded-t-none"
                                     data-ai-hint={product.image.imageHint}
                                 />
                             )}
