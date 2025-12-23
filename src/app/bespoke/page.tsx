@@ -45,7 +45,7 @@ export default function BespokePage() {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-center text-center text-white overflow-hidden">
+        <section className="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center text-center text-white overflow-hidden">
             <div className="absolute inset-0 bg-background-texture opacity-30"></div>
             <div className="absolute inset-0 bg-black/50" />
             <div className="relative z-10 flex flex-col items-center p-4">

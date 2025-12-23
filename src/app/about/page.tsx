@@ -33,7 +33,7 @@ export default function AboutPage() {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-center text-center overflow-hidden">
+        <section className="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center text-center overflow-hidden">
              <div className="relative z-10 flex flex-col items-center p-4 text-white">
                 <ParticleTextEffect words={aboutWords} />
             </div>
