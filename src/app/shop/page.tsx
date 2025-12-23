@@ -8,6 +8,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Slider } from "@/components/ui/slider";
 import { ChevronDown, Filter } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ready-to-Wear Collection",
+  description: "Explore our curated collections of ready-to-wear garments, including agbadas, suits, and tunics, crafted with the same precision and passion as our bespoke pieces.",
+};
+
 
 const Filters = () => (
     <div className="space-y-6">

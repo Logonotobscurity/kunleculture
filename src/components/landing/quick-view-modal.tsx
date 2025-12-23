@@ -7,6 +7,7 @@ import Image from 'next/image';
 import type { ImagePlaceholder } from "@/lib/placeholder-images";
 import { Facebook, Twitter, Mail } from "lucide-react";
 import Link from "next/link";
+import { Card, CardContent } from "../ui/card";
 
 interface QuickViewModalProps {
     isOpen: boolean;
@@ -26,12 +27,27 @@ export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = f
 
     return (
         <Dialog open={isOpen} onOpenChange={onOpenChange}>
-            <DialogContent className="sm:max-w-[825px] bg-stone-100 p-0">
+            <DialogContent className="sm:max-w-[825px] bg-stone-100 p-0 rounded-lg">
                 {isShareModal ? (
-                    <div className="p-8">
+                    <div className="p-6 md:p-8">
                         <DialogHeader>
-                            <DialogTitle className="text-2xl font-bold mb-4">Share "{product.title}"</DialogTitle>
+                            <DialogTitle className="text-2xl font-bold mb-4 text-center">Share "{product.title}"</DialogTitle>
                         </DialogHeader>
+                        <Card className="overflow-hidden mb-6">
+                            <CardContent className="p-0">
+                                <div className="relative aspect-square w-full mx-auto max-w-sm">
+                                    {product.image && (
+                                        <Image
+                                            src={product.image.imageUrl}
+                                            alt={product.image.description}
+                                            fill
+                                            className="object-cover"
+                                            data-ai-hint={product.image.imageHint}
+                                        />
+                                    )}
+                                </div>
+                            </CardContent>
+                        </Card>
                         <div className="flex justify-center space-x-4">
                             <Button variant="outline" size="lg" asChild>
                                 <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`} target="_blank" rel="noopener noreferrer">
@@ -69,7 +85,7 @@ export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = f
                             </DialogHeader>
                             <div className="space-y-4">
                                 <p className="text-muted-foreground">This is a placeholder description for the {product.title}. A full, engaging description would go here, detailing the fabric, fit, and unique features of this exquisite garment.</p>
-                                <Button size="lg" variant="outline" className="w-full rounded-full" asChild>
+                                <Button size="lg" className="w-full rounded-full" asChild>
                                     <Link href={`/quote?product=${encodeURIComponent(product.title)}`}>Request for Quote</Link>
                                 </Button>
                             </div>

@@ -7,6 +7,14 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
+
+// Note: Metadata can't be exported from a client component.
+// For dynamic metadata on this page, this file would need to be refactored.
+// export const metadata: Metadata = {
+//   title: "Lookbook",
+//   description: "A visual journey through the world of Kunle Couture. Explore our curated collections of Agbada, suits, tunics, and draw inspiration from our signature styling.",
+// };
 
 const allLooks = PlaceHolderImages.filter(p => p.id.startsWith('collection-') || p.id.startsWith('editorial-') || p.id.startsWith('category-'));
 

@@ -5,6 +5,12 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { NewsletterSection } from "@/components/landing/newsletter-section";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Story",
+  description: "Discover the philosophy, artistry, and heritage that define every stitch of Kunle Couture. Learn about our mission to celebrate African narratives through contemporary menswear.",
+};
 
 export default function AboutPage() {
   const aboutHeroImage = PlaceHolderImages.find((p) => p.id === "about-hero");

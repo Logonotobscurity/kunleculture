@@ -10,6 +10,14 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import type { Metadata } from 'next';
+
+// This metadata would ideally be in a server component wrapper if the page was server-rendered
+// export const metadata: Metadata = {
+//   title: "Request a Quote",
+//   description: "Request a personalized quote for a bespoke garment or consultation. Start a conversation with us on WhatsApp to begin your Kunle Couture experience.",
+// };
+
 
 function QuoteForm() {
   const searchParams = useSearchParams();

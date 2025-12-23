@@ -7,6 +7,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Check, PencilLine, Ruler, Scissors, Shirt } from "lucide-react";
 import { BespokeSection } from "@/components/landing/bespoke-section";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bespoke Services",
+  description: "Experience the pinnacle of personalization with a Kunle Couture bespoke garment. Discover our process from consultation to the final fitting, crafted exclusively for you.",
+};
+
 
 const faqs = [
     {
