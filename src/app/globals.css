@@ -99,7 +99,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-tailoring-process bg-background-texture text-foreground;
+    @apply bg-stone-100 text-foreground;
     font-family: 'Gilroy', sans-serif;
   }
 }

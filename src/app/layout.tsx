@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppWidget } from "@/components/landing/whatsapp-widget";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { BackgroundGlow } from "@/components/ui/background-glow";
 
 const defaultMetadataImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
@@ -78,7 +79,10 @@ export default function RootLayout({
         />
       </head>
       <body className={cn("antialiased")}>
-        {children}
+        <BackgroundGlow />
+        <div className="relative z-10">
+            {children}
+        </div>
         <WhatsAppWidget />
         <Toaster />
       </body>
