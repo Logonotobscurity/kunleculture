@@ -87,7 +87,6 @@ export default function ShopPage() {
             <div className="flex flex-col md:flex-row gap-8">
                 {/* Desktop Filters */}
                 <aside className="hidden md:block w-full md:w-1/4 lg:w-1/5">
-                    <h2 className="text-2xl font-bold mb-4">Filters</h2>
                     <Filters />
                 </aside>
 
@@ -99,7 +98,6 @@ export default function ShopPage() {
                         </SheetTrigger>
                         <SheetContent side="left" className="bg-background">
                             <div className="p-4">
-                                <h2 className="text-2xl font-bold mb-4">Filters</h2>
                                 <Filters />
                             </div>
                         </SheetContent>
