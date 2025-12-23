@@ -1,36 +1,9 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local'
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppWidget } from "@/components/landing/whatsapp-widget";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-
-const gilroy = localFont({
-  src: [
-    {
-      path: "../fonts/Gilroy-Regular.woff",
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: "../fonts/Gilroy-Medium.woff",
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: "../fonts/Gilroy-SemiBold.woff",
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: "../fonts/Gilroy-Bold.woff",
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  variable: '--font-gilroy',
-})
 
 const defaultMetadataImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
@@ -73,9 +46,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${gilroy.variable}`}>
+    <html lang="en" suppressHydrationWarning>
       <head>
-          <link
+        <link
           rel="preload"
           href="/fonts/Gilroy-Bold.woff"
           as="font"
@@ -84,7 +57,6 @@ export default function RootLayout({
         />
         <link
           rel="preload"
-
           href="/fonts/Gilroy-SemiBold.woff"
           as="font"
           type="font/woff"
