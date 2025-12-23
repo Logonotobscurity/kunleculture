@@ -68,7 +68,6 @@ export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = f
                             </DialogHeader>
                             <div className="space-y-4">
                                 <p className="text-muted-foreground">This is a placeholder description for the {product.title}. A full, engaging description would go here, detailing the fabric, fit, and unique features of this exquisite garment.</p>
-                                <Button size="lg" className="w-full">Add to Cart</Button>
                                 <Button size="lg" variant="outline" className="w-full">Request for Quote</Button>
                             </div>
                         </div>
