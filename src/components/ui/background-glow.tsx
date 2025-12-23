@@ -9,7 +9,7 @@ export const BackgroundGlow = () => {
         backgroundImage: `
           radial-gradient(circle at center, #FFF991 0%, transparent 70%)
         `,
-        opacity: 0.6,
+        opacity: 0.8,
         mixBlendMode: "multiply",
         pointerEvents: "none",
       }}
