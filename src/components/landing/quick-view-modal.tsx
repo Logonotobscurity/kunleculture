@@ -64,10 +64,7 @@ export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = f
                         </div>
                         <div className="p-8">
                             <DialogHeader>
-                                <DialogTitle className="text-3xl font-bold font-sans mb-2">{product.title}</DialogTitle>
-                                <DialogDescription className="text-xl text-muted-foreground pb-4">
-                                    {product.price.startsWith("Request") ? product.price : `$${product.price}`}
-                                </DialogDescription>
+                                <DialogTitle className="text-3xl font-bold font-sans mb-4">{product.title}</DialogTitle>
                             </DialogHeader>
                             <div className="space-y-4">
                                 <p className="text-muted-foreground">This is a placeholder description for the {product.title}. A full, engaging description would go here, detailing the fabric, fit, and unique features of this exquisite garment.</p>
