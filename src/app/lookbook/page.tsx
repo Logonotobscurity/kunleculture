@@ -1,14 +1,12 @@
 
 'use client';
-import { useState } from "react";
 import { Navbar } from "@/components/landing/navbar";
 import { Footer } from "@/components/landing/footer";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
+import { ParticleTextEffect } from "@/components/ui/particle-text-effect";
 
 // Note: Metadata can't be exported from a client component.
 // For dynamic metadata on this page, this file would need to be refactored.
@@ -18,19 +16,10 @@ import type { Metadata } from "next";
 // };
 
 const allLooks = PlaceHolderImages.filter(p => p.id.startsWith('collection-') || p.id.startsWith('editorial-') || p.id.startsWith('category-'));
+const lookbookWords = ["The Lookbook", "Visual Journey", "Inspiration", "Kunle Style"];
 
-const categories = ["All", "Agbada", "Suits", "Tunic", "Casuals"];
-
-const looksByCategory: Record<string, typeof allLooks> = {
-    "All": allLooks,
-    "Agbada": allLooks.filter(l => l.description.toLowerCase().includes('agbada')),
-    "Suits": allLooks.filter(l => l.description.toLowerCase().includes('suit')),
-    "Tunic": allLooks.filter(l => l.description.toLowerCase().includes('tunic')),
-    "Casuals": allLooks.filter(l => l.description.toLowerCase().includes('casual')),
-}
 
 export default function LookbookPage() {
-  const [activeTab, setActiveTab] = useState("All");
 
   const MasonryImage = ({ look, index }: { look: any; index: number }) => {
     const isTall = index % 4 === 0 || index % 4 === 3;
@@ -52,12 +41,18 @@ export default function LookbookPage() {
   }
 
   return (
-    <div className="flex flex-col min-h-dvh">
+    <div className="flex flex-col min-h-dvh bg-stone-100">
       <Navbar />
-      <main className="flex-1 pt-20">
+      <main className="flex-1">
+        <section className="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center text-center overflow-hidden">
+             <div className="relative z-10 flex flex-col items-center p-4 text-white">
+                <ParticleTextEffect words={lookbookWords} />
+            </div>
+        </section>
+
         <section className="w-full py-16 md:py-24">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center max-w-3xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-12">
               <h1 className="text-h1-mobile md:text-h1-desktop font-sans font-semibold">
                 The Lookbook
               </h1>
@@ -66,12 +61,12 @@ export default function LookbookPage() {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[250px] mt-12">
-                {looksByCategory[activeTab].map((look, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[250px]">
+                {allLooks.map((look, index) => (
                     <MasonryImage key={look.id} look={look} index={index} />
                 ))}
             </div>
-            {looksByCategory[activeTab].length === 0 && (
+            {allLooks.length === 0 && (
                 <div className="text-center py-20">
                     <p className="text-muted-foreground text-lg">No looks found for this category.</p>
                 </div>
@@ -84,3 +79,4 @@ export default function LookbookPage() {
     </div>
   );
 }
+

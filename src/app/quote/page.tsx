@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Suspense } from 'react';
@@ -11,6 +12,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import type { Metadata } from 'next';
+import { ParticleTextEffect } from '@/components/ui/particle-text-effect';
 
 // This metadata would ideally be in a server component wrapper if the page was server-rendered
 // export const metadata: Metadata = {
@@ -18,6 +20,7 @@ import type { Metadata } from 'next';
 //   description: "Request a personalized quote for a bespoke garment or consultation. Start a conversation with us on WhatsApp to begin your Kunle Couture experience.",
 // };
 
+const quoteWords = ["Request a Quote", "Get in Touch", "Bespoke Inquiry", "Start Creating"];
 
 function QuoteForm() {
   const searchParams = useSearchParams();
@@ -41,11 +44,16 @@ Thank you!`;
   };
 
   return (
-    <div className="flex flex-col min-h-dvh">
+    <div className="flex flex-col min-h-dvh bg-stone-100">
       <Navbar />
-      <main className="flex-1 pt-24 pb-12">
-        <div className="container mx-auto px-4 md:px-6 max-w-2xl">
-          <Card className="shadow-large border-yellow-900/10 rounded-xl">
+      <main className="flex-1">
+        <section className="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center text-center overflow-hidden">
+             <div className="relative z-10 flex flex-col items-center p-4 text-white">
+                <ParticleTextEffect words={quoteWords} />
+            </div>
+        </section>
+        <div className="container mx-auto px-4 md:px-6 max-w-2xl py-12">
+          <Card className="shadow-large border-yellow-900/10 rounded-xl -mt-[40vh] bg-stone-100/80 backdrop-blur-sm">
             <CardHeader className="text-center">
               <CardTitle className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
                 Request a Quote
