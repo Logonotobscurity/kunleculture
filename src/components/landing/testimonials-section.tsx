@@ -43,11 +43,11 @@ const testimonials = [
 
 export function TestimonialsSection() {
     return (
-        <section className="w-full py-16 md:py-24 overflow-hidden">
+        <section className="w-full py-16 md:py-24 overflow-hidden" aria-labelledby="testimonials-heading">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
                     <div className="max-w-xl">
-                        <h2 className="text-h3-mobile md:text-h3-desktop font-bold font-sans">
+                        <h2 id="testimonials-heading" className="text-h3-mobile md:text-h3-desktop font-bold font-sans">
                             This experience actually changes lives. Don’t just take it from us.
                         </h2>
                     </div>
@@ -96,7 +96,7 @@ export function TestimonialsSection() {
                                         </blockquote>
                                         {testimonial.name && (
                                         <div className="flex items-center gap-3">
-                                            <div className="w-3 h-3 bg-pink-900 rounded-full shadow-[0_0_12px_3px] shadow-pink-900/50"></div>
+                                            <div className="w-3 h-3 bg-pink-900 rounded-full shadow-[0_0_12px_3px] shadow-pink-900/50" aria-hidden="true"></div>
                                             <p className="font-semibold uppercase tracking-wide text-sm">
                                                 {testimonial.name}{testimonial.title && ", "}
                                                 <span className="text-muted-foreground">{testimonial.title}</span>

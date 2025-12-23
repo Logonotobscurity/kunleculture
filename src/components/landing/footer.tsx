@@ -35,7 +35,7 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4 flex flex-col">
-            <Link href="/" className="mb-4">
+            <Link href="/" className="mb-4" aria-label="Back to homepage">
                <KunleLogo className="w-[200px] h-auto" />
             </Link>
             <p className="text-sm text-yellow-900/70 mb-6 max-w-sm">
@@ -51,6 +51,7 @@ export function Footer() {
                 <Input
                     type="email"
                     placeholder="Join the Kunle Circle"
+                    aria-label="Email for newsletter subscription"
                     className="h-10 bg-black/5 border-yellow-900/20 text-yellow-900 placeholder:text-yellow-900/70 focus:bg-black/10 flex-grow"
                 />
                 <Button type="submit" size="default" className="h-10">

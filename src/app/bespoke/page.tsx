@@ -45,10 +45,10 @@ const faqs = [
   ];
 
   const WhyBespoke = () => (
-    <section className="w-full py-16 md:py-24 bg-stone-100">
+    <section className="w-full py-16 md:py-24 bg-stone-100" aria-labelledby="why-bespoke-heading">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-3xl mx-auto">
-                    <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
+                    <h2 id="why-bespoke-heading" className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
                         Why Choose Bespoke?
                     </h2>
                     <p className="mt-4 text-lg text-muted-foreground">
@@ -57,17 +57,17 @@ const faqs = [
                 </div>
                 <div className="mt-12 grid md:grid-cols-3 gap-8">
                     <div className="text-center p-6 border rounded-lg shadow-subtle border-yellow-900/20 bg-stone-100/50">
-                        <Ruler className="w-12 h-12 mx-auto text-primary mb-4"/>
+                        <Ruler className="w-12 h-12 mx-auto text-primary mb-4" aria-hidden="true"/>
                         <h3 className="text-xl font-bold mb-2">Perfect Fit</h3>
                         <p className="text-muted-foreground">Crafted to your exact measurements, a bespoke garment moves with you and fits like a second skin.</p>
                     </div>
                     <div className="text-center p-6 border rounded-lg shadow-subtle border-yellow-900/20 bg-stone-100/50">
-                        <Shirt className="w-12 h-12 mx-auto text-primary mb-4"/>
+                        <Shirt className="w-12 h-12 mx-auto text-primary mb-4" aria-hidden="true"/>
                         <h3 className="text-xl font-bold mb-2">Exclusive Design</h3>
                         <p className="text-muted-foreground">From lapel style to button choice, every detail is chosen by you, creating a truly one-of-a-kind piece.</p>
                     </div>
                     <div className="text-center p-6 border rounded-lg shadow-subtle border-yellow-900/20 bg-stone-100/50">
-                        <Check className="w-12 h-12 mx-auto text-primary mb-4"/>
+                        <Check className="w-12 h-12 mx-auto text-primary mb-4" aria-hidden="true"/>
                         <h3 className="text-xl font-bold mb-2">Lasting Quality</h3>
                         <p className="text-muted-foreground">Using the finest materials and construction techniques, your garment is built to last a lifetime.</p>
                     </div>
@@ -77,10 +77,10 @@ const faqs = [
   )
 
   const FaqBespoke = () => (
-     <section className="w-full py-16 md:py-24 bg-stone-100/50">
+     <section className="w-full py-16 md:py-24 bg-stone-100/50" aria-labelledby="bespoke-faq-heading">
             <div className="container mx-auto px-4 md:px-6 max-w-4xl">
                  <div className="text-center max-w-3xl mx-auto mb-12">
-                    <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
+                    <h2 id="bespoke-faq-heading" className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
                         Frequently Asked Questions
                     </h2>
                 </div>
@@ -107,12 +107,13 @@ export default function BespokePage() {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full">
+        <section className="w-full" aria-labelledby="bespoke-hero-title">
             <div className="relative h-[90vh] min-h-[700px] w-full flex items-center justify-center text-center text-white overflow-hidden shadow-large bg-stone-100">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_0px_0px,rgba(0,0,0,0.15),rgba(0,0,0,0))]"/>
                 <div className="relative z-10 flex flex-col items-center p-4">
                     <div className="h-[240px] md:h-[300px] flex items-center justify-center">
                         <ParticleTextEffect words={bespokeWords} />
+                        <h1 id="bespoke-hero-title" className="sr-only">Bespoke Services</h1>
                     </div>
                     <Button size="lg" className="mt-8 rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large px-10" asChild>
                         <Link href="/quote?product=Bespoke%20Consultation">Book a Consultation</Link>

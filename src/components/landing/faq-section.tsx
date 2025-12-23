@@ -32,11 +32,11 @@ const faqs = [
 
 export function FaqSection() {
   return (
-    <section className="w-full py-16 md:py-24">
+    <section className="w-full py-16 md:py-24" aria-labelledby="faq-heading">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12">
           <div className="w-full">
-            <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
+            <h2 id="faq-heading" className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
               Your Questions, Answered
             </h2>
           </div>

@@ -102,10 +102,10 @@ export function CollectionSection() {
 
   return (
     <>
-    <section className="w-full py-16 md:py-24">
+    <section className="w-full py-16 md:py-24" aria-labelledby="collection-heading">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
+          <h2 id="collection-heading" className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
             Full Collection
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -128,13 +128,13 @@ export function CollectionSection() {
                   />
                 )}
                 <div className="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Button size="icon" variant="secondary" className="rounded-full shadow-lg h-10 w-10 bg-background/80 hover:bg-background" onClick={() => handleWishlistClick(item.title)}>
+                    <Button size="icon" variant="secondary" className="rounded-full shadow-lg h-10 w-10 bg-background/80 hover:bg-background" onClick={() => handleWishlistClick(item.title)} aria-label={`Add ${item.title} to wishlist`}>
                         <Heart className="w-5 h-5 text-muted-foreground" />
                     </Button>
-                    <Button size="icon" variant="secondary" className="rounded-full shadow-lg h-10 w-10 bg-background/80 hover:bg-background" onClick={() => handleQuickViewClick(item)}>
+                    <Button size="icon" variant="secondary" className="rounded-full shadow-lg h-10 w-10 bg-background/80 hover:bg-background" onClick={() => handleQuickViewClick(item)} aria-label={`Quick view ${item.title}`}>
                         <Eye className="w-5 h-5 text-muted-foreground" />
                     </Button>
-                     <Button size="icon" variant="secondary" className="rounded-full shadow-lg h-10 w-10 bg-background/80 hover:bg-background" onClick={() => handleShareClick(item)}>
+                     <Button size="icon" variant="secondary" className="rounded-full shadow-lg h-10 w-10 bg-background/80 hover:bg-background" onClick={() => handleShareClick(item)} aria-label={`Share ${item.title}`}>
                         <Share2 className="w-5 h-5 text-muted-foreground" />
                     </Button>
                 </div>

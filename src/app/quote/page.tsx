@@ -47,12 +47,13 @@ Thank you!`;
     <div className="flex flex-col min-h-dvh bg-stone-100">
       <Navbar />
       <main className="flex-1">
-        <section className="w-full">
+        <section className="w-full" aria-labelledby="quote-hero-title">
             <div className="relative h-[90vh] min-h-[700px] w-full flex items-center justify-center text-center text-white overflow-hidden shadow-large bg-stone-100">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_0px_0px,rgba(0,0,0,0.15),rgba(0,0,0,0))]"/>
                 <div className="relative z-10 flex flex-col items-center p-4">
                     <div className="h-[240px] md:h-[300px] flex items-center justify-center">
                         <ParticleTextEffect words={quoteWords} />
+                        <h1 id="quote-hero-title" className="sr-only">Request a Quote</h1>
                     </div>
                 </div>
             </div>
@@ -79,6 +80,7 @@ Thank you!`;
                     placeholder="Enter your name"
                     required
                     className="mt-2 h-12"
+                    aria-label="Your Name"
                   />
                 </div>
                 <div>
@@ -89,6 +91,7 @@ Thank you!`;
                     value={product}
                     disabled
                     className="mt-2 h-12 bg-stone-200/50"
+                    aria-label="Product of Interest"
                   />
                 </div>
                 <div>
@@ -101,6 +104,7 @@ Thank you!`;
                     required
                     rows={5}
                     className="mt-2"
+                    aria-label="Your Message"
                   />
                 </div>
                 <Button type="submit" size="lg" className="w-full rounded-full h-12">

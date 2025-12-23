@@ -12,6 +12,7 @@ import dynamic from "next/dynamic";
 
 const NewsletterSection = dynamic(() => import('@/components/landing/newsletter-section').then(m => m.NewsletterSection));
 
+// Using a dynamic title for the page
 // export const metadata: Metadata = {
 //   title: "Our Story",
 //   description: "Discover the philosophy, artistry, and heritage that define every stitch of Kunle Couture. Learn about our mission to celebrate African narratives through contemporary menswear.",
@@ -35,24 +36,25 @@ export default function AboutPage() {
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full">
+        <section className="w-full" aria-labelledby="about-hero-title">
             <div className="relative h-[90vh] min-h-[700px] w-full flex items-center justify-center text-center text-white overflow-hidden shadow-large bg-stone-100">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_0px_0px,rgba(0,0,0,0.15),rgba(0,0,0,0))]"/>
                 <div className="relative z-10 flex flex-col items-center p-4">
                     <div className="h-[240px] md:h-[300px] flex items-center justify-center">
                        <ParticleTextEffect words={aboutWords} />
+                       <h1 id="about-hero-title" className="sr-only">About Kunle Couture</h1>
                     </div>
                 </div>
             </div>
         </section>
 
         {/* Story Section */}
-        <section className="w-full py-16 md:py-24 bg-stone-100">
+        <section className="w-full py-16 md:py-24 bg-stone-100" aria-labelledby="our-story-heading">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <span className="block h-0.5 w-20 bg-accent"></span>
-                <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
+                <span className="block h-0.5 w-20 bg-accent" aria-hidden="true"></span>
+                <h2 id="our-story-heading" className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
                   Our Story
                 </h2>
                 <p className="text-lg text-muted-foreground">
@@ -82,10 +84,10 @@ export default function AboutPage() {
         </section>
         
         {/* Mission & Values Section */}
-        <section className="w-full py-16 md:py-24 bg-stone-100/50">
+        <section className="w-full py-16 md:py-24 bg-stone-100/50" aria-labelledby="our-mission-heading">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-3xl mx-auto">
-                    <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
+                    <h2 id="our-mission-heading" className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
                         Our Mission
                     </h2>
                     <p className="mt-4 text-lg text-muted-foreground">
@@ -95,7 +97,7 @@ export default function AboutPage() {
                 <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                     {values.map((value) => (
                         <div key={value} className="flex flex-col items-center">
-                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground mb-4">
+                            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground mb-4" aria-hidden="true">
                                 <Check className="w-6 h-6" />
                             </div>
                             <h3 className="font-semibold text-lg">{value}</h3>

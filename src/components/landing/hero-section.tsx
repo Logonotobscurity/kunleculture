@@ -14,12 +14,13 @@ const heroWords = [
 
 export function HeroSection() {
   return (
-    <section className="w-full">
+    <section className="w-full" aria-labelledby="hero-title">
         <div className="relative h-[90vh] min-h-[700px] w-full flex items-center justify-center text-center text-white overflow-hidden shadow-large bg-stone-100">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_0px_0px,rgba(0,0,0,0.15),rgba(0,0,0,0))]"/>
             <div className="relative z-10 flex flex-col items-center p-4">
                 <div className="h-[240px] md:h-[300px] flex items-center justify-center">
                    <ParticleTextEffect words={heroWords} />
+                   <h1 id="hero-title" className="sr-only">Kunle Couture: Bespoke Agbadas, Tailoring, Ready-to-Wear, Collections, and Accessories</h1>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Button size="lg" className="bg-yellow-900 text-white hover:bg-yellow-700 rounded-full shadow-large px-8 sm:px-12 md:px-16 py-2.5 md:py-3.5 text-base md:text-xl font-semibold" asChild>

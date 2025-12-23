@@ -4,7 +4,7 @@ export const KunleLogo = ({ className }: { className?: string }) => (
     <svg
     viewBox="0 0 180 24"
     className={cn("fill-current", className)}
-    aria-label="Logo"
+    aria-label="Kunle Couture Logo"
   >
     <text
       x="0"

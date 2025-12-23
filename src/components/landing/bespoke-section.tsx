@@ -32,13 +32,13 @@ const processSteps = [
 
 export function BespokeSection() {
   return (
-    <section className="w-full py-16 md:py-24 bg-tailoring-process bg-background-texture">
+    <section className="w-full py-16 md:py-24 bg-tailoring-process bg-background-texture" aria-labelledby="bespoke-art-heading">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 items-center gap-12">
             <div className="w-full">
                 <div className="mb-8 md:mb-0">
-                    <span className="block h-0.5 w-20 bg-accent mb-5"></span>
-                    <h2 className="text-h3-mobile md:text-h3-desktop font-bold font-sans text-yellow-900">
+                    <span className="block h-0.5 w-20 bg-accent mb-5" aria-hidden="true"></span>
+                    <h2 id="bespoke-art-heading" className="text-h3-mobile md:text-h3-desktop font-bold font-sans text-yellow-900">
                         The Art of Bespoke
                     </h2>
                     <p className="mt-4 text-lg md:text-xl text-yellow-900/80 max-w-2xl">
@@ -50,7 +50,7 @@ export function BespokeSection() {
                 <div className="grid gap-8 sm:grid-cols-2">
                     {processSteps.map((step) => (
                         <div key={step.title} className="flex items-start gap-4">
-                            <div className="bg-white/10 p-3 rounded-full">
+                            <div className="bg-white/10 p-3 rounded-full" aria-hidden="true">
                                 {step.icon}
                             </div>
                             <div>

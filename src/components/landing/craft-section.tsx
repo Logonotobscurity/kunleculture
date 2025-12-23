@@ -3,6 +3,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const craftCards = [
   {
@@ -27,10 +28,10 @@ const craftCards = [
 
 export function CraftSection() {
   return (
-    <section className="w-full py-16 md:py-24">
+    <section className="w-full py-16 md:py-24" aria-labelledby="craft-heading">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
+          <h2 id="craft-heading" className="text-h3-mobile md:text-h3-desktop font-sans font-semibold">
             The Craft of Kunle Couture
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -60,8 +61,10 @@ export function CraftSection() {
                 <p className="text-muted-foreground">{card.description}</p>
               </CardContent>
               <CardFooter className="p-5 pt-0">
-                <Button variant="link" className="p-0 text-primary group-hover:text-accent">
-                  Learn More <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                <Button variant="link" asChild className="p-0 text-primary group-hover:text-accent">
+                  <Link href={card.link} aria-label={`Learn more about ${card.title}`}>
+                    Learn More <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>

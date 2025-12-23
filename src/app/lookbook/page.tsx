@@ -44,21 +44,22 @@ export default function LookbookPage() {
     <div className="flex flex-col min-h-dvh bg-stone-100">
       <Navbar />
       <main className="flex-1">
-        <section className="w-full">
+        <section className="w-full" aria-labelledby="lookbook-hero-title">
             <div className="relative h-[90vh] min-h-[700px] w-full flex items-center justify-center text-center text-white overflow-hidden shadow-large bg-stone-100">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_0px_0px,rgba(0,0,0,0.15),rgba(0,0,0,0))]"/>
                 <div className="relative z-10 flex flex-col items-center p-4">
                     <div className="h-[240px] md:h-[300px] flex items-center justify-center">
                         <ParticleTextEffect words={lookbookWords} />
+                        <h1 id="lookbook-hero-title" className="sr-only">The Lookbook</h1>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section className="w-full py-16 md:py-24">
+        <section className="w-full py-16 md:py-24" aria-labelledby="lookbook-gallery-title">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h1 className="text-h1-mobile md:text-h1-desktop font-sans font-semibold">
+              <h1 id="lookbook-gallery-title" className="text-h1-mobile md:text-h1-desktop font-sans font-semibold">
                 The Lookbook
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
@@ -84,4 +85,3 @@ export default function LookbookPage() {
     </div>
   );
 }
-
