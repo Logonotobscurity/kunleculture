@@ -26,14 +26,6 @@ export default function ShopPage() {
         
         <div className="container mx-auto px-4 md:px-6">
             <div className="w-full">
-                 <div className="text-center max-w-3xl mx-auto py-12">
-                  <h1 className="text-h1-mobile md:text-h1-desktop font-sans font-semibold">
-                    Ready-to-Wear
-                  </h1>
-                  <p className="mt-4 text-lg text-muted-foreground">
-                    Explore our curated collections of ready-to-wear garments, crafted with the same precision and passion as our bespoke pieces.
-                  </p>
-                </div>
                 <CollectionSection />
             </div>
         </div>
