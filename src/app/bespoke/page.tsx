@@ -41,18 +41,21 @@ const faqs = [
 export default function BespokePage() {
   
   return (
-    <div className="flex flex-col min-h-dvh bg-black">
+    <div className="flex flex-col min-h-dvh bg-stone-100">
       <Navbar />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center text-center text-white overflow-hidden">
-            <div className="absolute inset-0 bg-background-texture opacity-30"></div>
-            <div className="absolute inset-0 bg-black/50" />
-            <div className="relative z-10 flex flex-col items-center p-4">
-                <ParticleTextEffect words={bespokeWords} />
-                 <Button size="lg" className="mt-8 rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large px-10" asChild>
-                    <Link href="/quote?product=Bespoke%20Consultation">Book a Consultation</Link>
-                </Button>
+        <section className="w-full">
+            <div className="relative h-[90vh] min-h-[700px] w-full flex items-center justify-center text-center text-white overflow-hidden shadow-large bg-stone-100">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_0px_0px,rgba(0,0,0,0.15),rgba(0,0,0,0))]"/>
+                <div className="relative z-10 flex flex-col items-center p-4">
+                    <div className="h-[240px] md:h-[300px] flex items-center justify-center">
+                        <ParticleTextEffect words={bespokeWords} />
+                    </div>
+                    <Button size="lg" className="mt-8 rounded-full bg-yellow-900 text-white hover:bg-yellow-700 shadow-large px-10" asChild>
+                        <Link href="/quote?product=Bespoke%20Consultation">Book a Consultation</Link>
+                    </Button>
+                </div>
             </div>
         </section>
 

@@ -32,6 +32,7 @@ export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = f
                     <div className="p-6 md:p-8">
                         <DialogHeader>
                             <DialogTitle className="text-2xl font-bold mb-4 text-center">Share "{product.title}"</DialogTitle>
+                            <DialogDescription className="sr-only">Share this product with your friends.</DialogDescription>
                         </DialogHeader>
                         <Card className="overflow-hidden mb-6">
                             <CardContent className="p-0">
@@ -82,6 +83,7 @@ export function QuickViewModal({ isOpen, onOpenChange, product, isShareModal = f
                         <div className="p-8">
                             <DialogHeader>
                                 <DialogTitle className="text-3xl font-bold font-sans mb-4">{product.title}</DialogTitle>
+                                <DialogDescription className="sr-only">Product quick view for {product.title}</DialogDescription>
                             </DialogHeader>
                             <div className="space-y-4">
                                 <p className="text-muted-foreground">This is a placeholder description for the {product.title}. A full, engaging description would go here, detailing the fabric, fit, and unique features of this exquisite garment.</p>
